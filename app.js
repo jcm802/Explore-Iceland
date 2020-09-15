@@ -20,11 +20,6 @@ useUnifiedTopology: true})
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
-// mongoose.connect("mongodb+srv://jcm802:munCHkinScm2*@iceland.aj3ff.mongodb.net/iceland?retryWrites=true&w=majority", { 	useNewUrlParser: true,
-// useUnifiedTopology: true})
-// .then(() => console.log('connected to db!'))
-// .catch(error => console.log(error.message));
-
 // To retrieve values from a form if added
 app.use(bodyParser.urlencoded({extended:true}));
 
