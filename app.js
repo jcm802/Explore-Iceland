@@ -13,16 +13,17 @@ const express 		= require("express"),
 // Seed the DB
 //seedDB();	  
 
+var url = process.env.DATABASEURL || "mongodb://localhost/iceland";
 // DB will be used for pages other than INDEX - LOCAL
-// mongoose.connect("mongodb://localhost/iceland", { 	useNewUrlParser: true,
-// useUnifiedTopology: true})
-// .then(() => console.log('Connected to DB!'))
-// .catch(error => console.log(error.message));
-
-mongoose.connect("mongodb+srv://jcm802:munCHkinScm2*@iceland.aj3ff.mongodb.net/iceland?retryWrites=true&w=majority", { 	useNewUrlParser: true,
+mongoose.connect(url, { 	useNewUrlParser: true,
 useUnifiedTopology: true})
-.then(() => console.log('connected to db!'))
+.then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
+
+// mongoose.connect("mongodb+srv://jcm802:munCHkinScm2*@iceland.aj3ff.mongodb.net/iceland?retryWrites=true&w=majority", { 	useNewUrlParser: true,
+// useUnifiedTopology: true})
+// .then(() => console.log('connected to db!'))
+// .catch(error => console.log(error.message));
 
 // To retrieve values from a form if added
 app.use(bodyParser.urlencoded({extended:true}));
