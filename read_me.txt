@@ -3,6 +3,8 @@ A work-in-progress personal project intended to be a prototype tourism website.
 Started with input:: node app.js
 The mongo daemon must also be running to function.
 
+See current website here: exploreiceland.herokuapp.com
+
 .. 10/09/2020 ..
 
 ==== Current Progress and Explanation =====
