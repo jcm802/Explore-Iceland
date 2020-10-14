@@ -18,7 +18,7 @@
   transform: translate(-50%, -50%);
 }
 
-.image1-content h2 {
+.image1-content p {
   width: 100%;
   font-size: 25px;
   margin-top: 90px;
@@ -26,42 +26,46 @@
 }
 
 .headlines {
-  /*background: red;*/
-  width: 100%;
-  position: absolute;
-  top: 100px;
-  right: 30px;
+  background: red;
+  width: 40%;
+  position: relative;
+  top: 30%;
+  left: 0%;
+
 }
 
 .explore-headline {
   font-size: 45px;
   position: absolute;
-  top: 100px;
-  left: 230px;
+  top: 50%;
+  left: 150%;
+  margin-left: 60px;
 }
 
 .plan-headline {
   font-size: 45px;
   position: absolute;
-  top: 100px;
-  left: 590px;
+  top: 50%;
+  left: 95%;
+  margin-left: 40px;
 }
 
 .book-headline {
   font-size: 45px;
   position: absolute;
-  top: 100px;
-  left: 950px;
+  top: 50%;
+  left: 40%;
 }
 
 .image1-content-images {
   /*background-color: blue;*/
-  display: inline-block;
-  width: 800px;
-  height: 350px;
+  display: block;
+  width: 80%;
+  height: 180%;
   position: absolute;
-  top: 250px;
-  left: 110px;
+  top: 140%;
+  left: 6%;
+  bottom: 40px;
 }
 
 .image1-content-images img {
@@ -70,45 +74,45 @@
 
 .explore-image-lg {
   display: inline-block;
-  width: 210px;
+  width: 20%;
   position: absolute;
   top: 20px;
-  left: 80px;
+  left: 10%;
   
 }
 
 .plan-image-lg {
   display: inline-block;
-  width: 210px;
+  width: 20%;
   position: absolute;
-  top: 30px;
-  left: 430px;
+  top: 20px;
+  left: 45%;
 }
 
 .book-image-lg {
   display: inline-block;
-  width: 210px;
+  width: 20%;
   position: absolute;
-  top: 30px;
-  left: 750px;
+  top: 20px;
+  left: 75%;
 }
 
 .text-container-2 {
   height: 280px;
-  font-size: 22px;
+  font-size: 20px;
   padding: 70px;
 }
 
 .text-container-2 div {
   display: inline-block;
-  margin-right: 30px;
   float: left;
   width: 280px;
   height: 280px;
+  margin-top: 25px
 }
 
 .free-para1 {
-  margin-left: 110px;
+  margin-left: 7%;
 }
 
 .free-para2 {
@@ -142,7 +146,7 @@
 .image2-content h1 {
   position: relative;
   top: 63px;
-  right: 440px;
+  right: 115%;
   width: 100%;
   font-size: 40px;
 }
@@ -150,7 +154,7 @@
 .image2-content p {
   font-size: 18px;
   top: 50px;
-  left: -400px;
+  right: 105%;
   position: relative;
   text-align: left;
   width: 350px;
@@ -210,3 +214,304 @@
   top: 275px;
   left: 120px;
 }
+
+@media only screen and (max-width: 1271px) {
+  .image1-content p {
+      font-size: 23px;
+  }
+
+  .text-container-2 {
+      font-size: 20px;
+      padding: 30px;
+  }
+
+  .text-container-2 div {
+    display: inline-block;
+    margin-right: 10px;
+    width: 280px;
+    height: 280px;
+  }
+
+}
+
+@media only screen and (max-width: 1132px) {
+  .image1-content p {
+    font-size: 17px;  
+  }
+
+  .free-para3 {
+  visibility: hidden;
+}
+
+.free-para1 {
+  margin-left: 15%;
+  
+}
+
+.text-container-2 div {
+  float:none;
+  display: inline-block;
+}
+
+.image2-content h1 {
+  visibility: hidden;
+}
+
+.image2-content p {
+  visibility: hidden;
+}
+
+.image2-content-images img {
+  display: block;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
+}
+
+.image2-content-images {
+  left: -10%;
+}
+
+
+  
+}
+
+@media only screen and (max-width: 1027px) {
+
+.image1-content p {
+    font-size: 15px;  
+}
+
+.explore-headline {
+  font-size: 40px;
+}
+
+.plan-headline {
+  font-size: 40px;
+}
+
+.book-headline {
+  font-size: 40px;
+}
+
+
+.text-container-2 div {
+  width: 80%;
+  text-align: left;
+  margin-top: 80px;
+  font-size: 25px;
+}
+
+.free-para1 {
+  margin-left: 10%;
+}
+
+.free-para2 {
+  visibility: hidden;
+}
+
+}
+
+@media only screen and (max-width: 850px) {
+
+.image1-content h2 {
+    font-size: 7px;
+    width: 350px;
+    position: relative;
+    left: 20%;
+}
+
+.explore-headline {
+  font-size: 27px;
+}
+
+.plan-headline {
+  font-size: 27px;
+}
+
+.book-headline {
+  font-size: 27px;
+}
+
+.image1-content p {
+  font-size: 14px;
+  }
+
+.explore-image-lg {
+  width: 18%;
+}
+
+.plan-image-lg {
+  width: 18%;
+}
+
+.book-image-lg {
+  width: 18%;
+}
+
+.image1-content-images {
+  left: 8%;
+  top: 120%;
+}
+
+.text-container-2 div {
+  width: 90%;
+  text-align: left;
+  margin-top: 60px;
+  font-size: 25px;
+}
+
+.free-para1 {
+  margin-left: 5%;
+}
+
+}
+
+@media only screen and (max-width: 636px) {
+
+.image1-content p {
+  font-size: 11px;
+}
+
+.image1-content-images {
+  left: 5%;
+  top: 110%;
+}
+
+.explore-headline {
+  font-size: 22px;
+  left: 145%;
+}
+
+.plan-headline {
+  font-size: 22px;
+  left: 88%;
+}
+
+.book-headline {
+  left: 42%;
+  font-size: 22px;
+}
+
+.explore-image-lg {
+  width: 23%;
+}
+
+.plan-image-lg {
+ width: 23%;
+}
+
+.book-image-lg {
+  width: 23%;
+}
+
+.headlines {
+  /*background: red;*/
+  width: 40%;
+  position: relative;
+  top: 30%;
+  left: -1%;
+}
+
+.image1 {
+  height: 250px;
+}
+
+.text-container-2 div {
+  width: 100%;
+  text-align: left;
+  margin-top: 45px;
+}
+
+.free-para1 {
+  margin-left: 1%;
+}
+
+}
+
+@media only screen and (max-width: 479px) {
+.headlines {
+  /*background: red;*/
+  width: 16%;
+  position: relative;
+  top: 30%;
+  left: 17%;
+}
+
+.image1-content-images {
+  left: 14%;
+  top: 110%;
+}
+
+.plan-headline {
+  visibility: hidden;
+}
+
+.explore-headline {
+  font-size: 22px;
+  left: 119%;
+}
+
+.explore-image-lg {
+  width: 30%;
+  left: 30px;
+  top: 10%;
+}
+
+.plan-image-lg {
+ visibility: hidden;
+}
+
+.book-headline {
+  left: 40%;
+  font-size: 22px;
+}
+
+.book-image-lg {
+  width: 30%;
+  left: 46%;
+  top: 10%;
+}
+
+.text-container-2 div {
+  width: 100%;
+  text-align: left;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+.free-para1 {
+  margin-left: 1%;
+}
+
+.image2-content-images {
+  position: absolute;
+  top: 50px;
+  left: 8%;
+}
+
+.explore-image-md {
+  position: absolute;
+  top: 0px;
+  width: 80px;
+}
+
+.plan-image-md {
+  position: absolute;
+  top: 150px;
+  width: 80px;
+}
+
+.book-image-md {
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  width: 70px;
+}
+
+.image2-content-images span {
+  width: 180px;
+  height: 200px;
+  display: block;
+  text-align: left;
+}
+
+/* Smallest screen is 320px*/

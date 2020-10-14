@@ -16,12 +16,46 @@
 	
 	<body>
 	<div class="header">
-
 		<a href="/"><div class="top-left">
 			<img class="top-left-image" src="/images/header/iceland_flag_index.png" alt="Iceland Flag">
 			<span class="logo-title">Explore Iceland</span>
-		
 		</div></a>
+		<!-- Visible Menu For Tablets and Mobiles -->
+		<a href = "#main-menu" 
+		id = "main-menu-toggle"
+		class ="menu-toggle"
+		aria-label = "Open main menu">
+			<span class = "sr-only">Open main menu</span>
+    		<span class = "fa fa-bars"></span>
+  		</a>
+  		<nav id = "main-menu" class = "main-menu" aria-label = "Main menu">
+    		<a href = "#main-menu-toggle" 
+    		id = "main-menu-close"
+    		class = "menu-close"
+    		aria-label = "Close main menu">
+    		<span class = "sr-only">Close main menu</span>
+      		<span class = "fas fa-arrow-circle-left" aria-hidden="true"></span>
+    		</a>
+    		<ul>
+    			<li><a href="#">Sign In</a></li>
+      			<li><a href="#">Login</a></li>
+      			<li><a href="#">Home</a></li>
+      			<li><a href="#">Explore</a></li>
+      			<li><a href="#">Things To Do</a></li>
+      			<li><a href="#">Places To Stay</a></li>
+      			<li><a href="#">Facts</a></li>
+      			<li><a href="#">Book</a></li>
+      			<li><a href="#">Shop</a></li>
+      			<li><a href="#">Planner</a></li>
+      			<li><a href="#">About</a></li>
+      			<li><a href="#">Contact</a></li>
+    		</ul>
+  		</nav>
+  		<a href="#main-menu-toggle" 
+  		class="backdrop" 
+  		tabindex="-1"
+  		hidden></a>
+  		<!------------------------->
 		<div class="extra-nav-container">
 			<div class="title-icons-container">
 			<a href="#"><span class="partners-title">Our Partners</span></a>
@@ -35,6 +69,24 @@
 					<label for="site-search"><img src="/images/header/Search_Sml.png"></label>
 					<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search Explore Iceland">
 				</div>
+				<!--Hidden until 1271px-->
+				<div class="contact-authentication-container-1271px"> 
+					<div class="about-contact-container-1271px">
+						<span>ABOUT</span><i class="far fa-question-circle"></i>
+						<span>CONTACT<span><i class="far fa-envelope"></i>
+					</div>
+					<div class="login-signup-container-1271px">
+						<span>LOGIN</span><i class="fas fa-sign-in-alt"></i>
+						<span>SIGN UP</span><i class="fas fa-user-plus"></i>
+					</div>
+				</div>
+				<!------------------------->
+				<!--Hidden until 850px-->
+				<div class="search-bar-container-850px">
+					<label for="site-search"><img src="/images/header/Search_Sml.png"></label>
+					<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search Explore Iceland">
+				</div>
+				<!---------------------->
 			</div>
 
 			<div class="contact-authentication-container">

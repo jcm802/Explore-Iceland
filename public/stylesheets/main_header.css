@@ -168,9 +168,314 @@ input:focus {
   margin: 7px;
 }
 
+.contact-authentication-container-1271px {
+  visibility: hidden;
+}
+
+.search-bar-container-850px {
+  visibility: hidden;
+  position: relative;
+  display: inline-block;
+  top: 12px;
+}
+
+.search-bar-container-850px input {
+  width: 170px;
+  height: 17px;
+  border: none;
+  border-radius: 5px;
+  background-color: #343F4B;
+  outline: none;
+  color: red;
+  padding: 5px;
+  opacity: 0.5;
+}
+
+.search-bar-container-850px input:focus {
+  background-color: white;
+}
+
+.search-bar-container-850px label img {
+  width: 11px;
+  padding-right: 2px;
+}
+
+/* Screen Reader Only*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Button styling */
+.menu-toggle {
+  position: absolute;
+  top: 1px;
+  display: inline-block;
+  padding: .75em 15px;
+  line-height: 1em;
+  font-size: 1.5em;
+  color: #FFFF;
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  color: #c00;
+}
 
 /*
-.home-nav-option {
-	margin-left: 10px;
-	margin-right: 10px;
-} */
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+.main-menu {
+  position: absolute;
+  display: none;
+  left: -200px;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: visible;
+  transition: left 0.3s ease,
+  box-shadow 0.3s ease;
+  z-index: 999;
+}
+
+.main-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 2.5em 0 0;
+  /* Hide shadow w/ -8px while 'closed' */
+  -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+     -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+          box-shadow: -8px 0 8px rgba(0,0,0,.5);
+  min-height: 100%;
+  width: 200px;
+  background: #1a1a1a;
+}
+
+.main-menu a {
+  display: block;
+  padding: .75em 15px;
+  line-height: 1em;
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #383838;
+}
+
+.main-menu li:first-child a {
+  border-top: 1px solid #383838;
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+  background: #333;
+  text-decoration: underline;
+}
+
+.main-menu .menu-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+ /*On small devices, allow it to toggle...
+*/
+/*
+ :target for non-JavaScript
+ [aria-expanded] will be used if/when JavaScript is added to improve interaction, though it's completely optional.
+*/
+.main-menu:target,
+.main-menu[aria-expanded="true"] {
+  display: block;
+  left: 0;
+  outline: none;
+  -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+  box-shadow: 3px 0 12px rgba(0,0,0,.25);
+}
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close {
+  z-index: 1001;
+}
+
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul {
+  position: relative;
+  z-index: 1000;
+}
+
+/* 
+ We could us `.main-menu:target:after`, but
+ it wouldn't be clickable.
+*/
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop{
+  position: absolute;
+  display: block;  
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: #000;
+  background: rgba(0,0,0,.85);
+  cursor: default;
+}
+
+@supports (position: fixed) {
+  .main-menu,
+  .main-menu:target + .backdrop,
+  .main-menu[aria-expanded="true"] + .backdrop{
+    position: fixed;
+  }
+}
+
+.menu-toggle, .main-menu .menu-close {
+    visibility: hidden;
+  }
+
+/*
+===============================
+===== Cross Compatibility =====
+===============================
+*/
+@media only screen and (max-width: 1271px) {
+  .tel-number {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (max-width: 1132px) {
+
+ .title-icons-container {
+  position: absolute;
+  top: 0.5em;
+  left: 50px;
+  width: 600px;
+  display: inline-block;
+  height: 80px;
+  padding: 5px;
+}
+
+.contact-authentication-container-1271px {
+  position: relative;
+  top: 4px;
+  visibility: visible;
+}
+
+.contact-authentication-container-1271px div {
+  display: inline-block;
+}
+
+.contact-authentication-container-1271px span {
+  font-size: 12px;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
+.contact-authentication-container-1271px div i {
+  font-size: 12px;
+}
+
+.fa-envelope {
+  margin-left: -3px;
+}
+
+.about-contact-container-1271px {
+  margin-left: -12px;
+}
+
+.login-signup-container-1271px {
+  margin-left: -5px;
+}
+
+.contact-authentication-container {
+  /*background: yellow;*/
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1027px) {
+  .header-nav {
+    display: none;
+  }
+
+  .menu-toggle, .main-menu .menu-close {
+    visibility: visible;
+  }
+
+  .top-left {
+    margin-left: 100px;
+  }
+
+  .extra-nav-container {
+  /*background-color: red;*/
+  width: 300px;
+
+}
+
+@media only screen and (max-width: 850px) {
+
+  .search-bar-container {
+    visibility: hidden;
+
+  }
+
+  .search-bar-container-850px {
+    visibility: visible;
+  }
+
+  .title-icons-container {
+    /*background: black;*/
+    height: 100px;
+  }
+
+}
+
+@media only screen and (max-width: 680px) {
+
+  .title-icons-container {
+    visibility: hidden;
+  }
+
+  .contact-authentication-container-1271px {
+    visibility: hidden;
+  }
+
+  .search-bar-container-850px {
+    visibility: hidden;
+  }
+
+  .top-left {
+    position: static;
+    text-align: center;
+     margin-left: 2px;
+     padding-top: 20px;
+  }
+
+ .top-left-image {
+    width: 120px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
+.logo-title {
+  font-family: Domine;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  
+  }
+}
+
+
