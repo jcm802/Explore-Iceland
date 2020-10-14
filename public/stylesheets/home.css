@@ -1,70 +1,212 @@
-body, html {
-  height: 100%;
-  margin: 0;
+.image-container-1 {
+  /*background: blue;*/
+  position: relative;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
 }
 
-body {
-  background-color: #343F4B;;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: white;
-  text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
+.image1 {
+  width: 100%;
 }
 
-.top-left {
+.image1-content {
+  /*background: blue;*/
+  width: 100%;
   position: absolute;
-  top: 8px;
-  left: 16px;
-z-index: 1;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.top-left-image {
+.image1-content h2 {
+  width: 100%;
+  font-size: 25px;
+  margin-top: 90px;
+  word-spacing: 5px;
+}
+
+.headlines {
+  /*background: red;*/
+  width: 100%;
+  position: absolute;
+  top: 100px;
+  right: 30px;
+}
+
+.explore-headline {
+  font-size: 45px;
+  position: absolute;
+  top: 100px;
+  left: 230px;
+}
+
+.plan-headline {
+  font-size: 45px;
+  position: absolute;
+  top: 100px;
+  left: 590px;
+}
+
+.book-headline {
+  font-size: 45px;
+  position: absolute;
+  top: 100px;
+  left: 950px;
+}
+
+.image1-content-images {
+  /*background-color: blue;*/
+  display: inline-block;
+  width: 800px;
+  height: 350px;
+  position: absolute;
+  top: 250px;
+  left: 110px;
+}
+
+.image1-content-images img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
+}
+
+.explore-image-lg {
+  display: inline-block;
+  width: 210px;
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  
+}
+
+.plan-image-lg {
+  display: inline-block;
+  width: 210px;
+  position: absolute;
+  top: 30px;
+  left: 430px;
+}
+
+.book-image-lg {
+  display: inline-block;
+  width: 210px;
+  position: absolute;
+  top: 30px;
+  left: 750px;
+}
+
+.text-container-2 {
+  height: 280px;
+  font-size: 22px;
+  padding: 70px;
+}
+
+.text-container-2 div {
+  display: inline-block;
+  margin-right: 30px;
+  float: left;
+  width: 280px;
+  height: 280px;
+}
+
+.free-para1 {
+  margin-left: 110px;
+}
+
+.free-para2 {
+  margin-left: 30px;
+}
+
+.free-para3 {
+  margin-left: 40px;
+}
+
+.image-container-3 {
+  /*background: blue;*/
+  position: relative;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.image2 {
+  width: 100%;
+  height: 500px;
+}
+
+.image2-content {
+  /*background: blue;*/
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image2-content h1 {
+  position: relative;
+  top: 63px;
+  right: 440px;
+  width: 100%;
+  font-size: 40px;
+}
+
+.image2-content p {
+  font-size: 18px;
+  top: 50px;
+  left: -400px;
+  position: relative;
+  text-align: left;
+  width: 350px;
+}
+
+.image2-content-images img {
   display: block;
-  width: 110px;
-  margin-left: 5px;
-  margin-bottom: 10px;
-
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
 }
 
-.logo-title {
-  font-family: Domine;
-  font-size: 13px;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-
+.image2-content-images {
+  position: absolute;
+  top: 50px;
+  left: 340px;
 }
 
-.header {
-  /*background-color: #333;*/
-	height: 150px;
-	position: relative;
+.explore-image-md {
+  position: absolute;
+  top: 0px;
+  width: 100px;
 }
 
-.header-nav {
-	/*background-color: red;*/
-	height: 25px;
-	width: 100%;
-	font-size: 15px;
-	position: absolute;
-	bottom: 0px;
-	text-transform: uppercase;
+.plan-image-md {
+  position: absolute;
+  top: 130px;
+  width: 100px;
 }
 
-.nav-options {
-	/*background-color: blue;*/
-	height: 15px;
-	font-family: 'Lato', sans-serif;
+.book-image-md {
+  position: absolute;
+  top: 260px;
+  left: 5px;
+  width: 93px;
 }
 
-.nav-options span {
-	margin-left: 15px;
-	margin-right: 50px;
+.image2-content-images span {
+  width: 300px;
+  height: 200px;
+  display: block;
+  text-align: left;
 }
 
-/*
-.home-nav-option {
-	margin-left: 10px;
-	margin-right: 10px;
-} */
+.image-para1 {
+ position: absolute;
+  top: 15px;
+  left: 120px;
+}
+
+.image-para2 {
+  position: absolute;
+  top: 150px;
+  left: 120px;
+}
+
+.image-para3 {
+  position: absolute;
+  top: 275px;
+  left: 120px;
+}
