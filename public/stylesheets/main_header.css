@@ -339,7 +339,7 @@ input:focus {
 
 .menu-toggle, .main-menu .menu-close {
     visibility: hidden;
-  }
+}
 
 /*
 ===============================
@@ -417,14 +417,13 @@ input:focus {
   .extra-nav-container {
   /*background-color: red;*/
   width: 300px;
-
+  }
 }
 
 @media only screen and (max-width: 850px) {
 
   .search-bar-container {
     visibility: hidden;
-
   }
 
   .search-bar-container-850px {
@@ -435,7 +434,6 @@ input:focus {
     /*background: black;*/
     height: 100px;
   }
-
 }
 
 @media only screen and (max-width: 680px) {
@@ -465,8 +463,8 @@ input:focus {
     margin-bottom: 6px;
     text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
              0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1);
-}
+             0px 18px 23px rgba(0,0,0,0.1); 
+  }
 
 .logo-title {
   font-family: Domine;
@@ -474,8 +472,5 @@ input:focus {
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-  
   }
 }
-
-

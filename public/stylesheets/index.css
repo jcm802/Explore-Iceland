@@ -196,54 +196,52 @@ z-index: 1;
 }
 
 @media only screen and (max-width: 657px) {
-    .centered{
-      font-size: 70px;
+  .centered{
+    font-size: 80px;
   }
-    .sub-heading {
-      font-size: 12px;
-       margin: 0;
+  .sub-heading {
+    font-size: 14px;
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 500px) {
-    .centered{
-      font-size: 60px;
+  .centered {
+    font-size: 70px;
   }
-    .sub-heading {
-      font-size: 10px;
-       margin: 0;
+  .sub-heading {
+    font-size: 12px;
+    margin: 0;
   }
 }
 
 @media only screen and (max-width: 479px) {
-    .centered{
-      font-size: 50px;
+  .centered {
+    font-size: 60px;
   }
-    .sub-heading {
-      font-size: 9px;
-       margin: 0;
+
+  .sub-heading {
+    font-size: 12px;
+    margin: 0;
   }
 
   .top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-z-index: 1;
-}
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    z-index: 1;
+  }
 
-.top-left-image {
-  display: block;
-  width: 100px;
-  margin-left: 5px;
-  margin-bottom: 10px;
+  .top-left-image {
+    display: block;
+    width: 100px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
 
-}
-
-.logo-title {
-  font-family: Domine;
-  font-size: 12px;
-  text-transform: uppercase;
-
-}
-
+  .logo-title {
+    font-family: Domine;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }
