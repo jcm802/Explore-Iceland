@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -215,7 +216,7 @@ input:focus {
 /* Button styling */
 .menu-toggle {
   position: absolute;
-  top: 1px;
+  top: 5px;
   display: inline-block;
   padding: .75em 15px;
   line-height: 1em;
@@ -453,8 +454,8 @@ input:focus {
   .top-left {
     position: static;
     text-align: center;
-     margin-left: 2px;
-     padding-top: 20px;
+    margin-left: 2px;
+    padding-top: 20px;
   }
 
  .top-left-image {

@@ -1,10 +1,9 @@
-A work-in-progress personal project intended to be a prototype tourism website. 
+# iceland
+Work-in-progress prototype tourism website.
 
 See current website here: exploreiceland.herokuapp.com
 
-======================
-== Current Progress ==
-======================
+# Current Progress
 
 Landing and Home page are viewable.
 
@@ -24,6 +23,6 @@ The website will feature login and sign up capability for people to review and c
 
 This is a continuous project, where I aim to implement full functionality, including a shop with e-commerce capability.
 
-===== Designs =====
+=== Designs ===
 
 Designs are in place for both the home and explore page. Also for the landing page, but this was revised. The designs can be found in the directory "artboards". These demonstrate some intention of the project.
