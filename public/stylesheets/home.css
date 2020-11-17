@@ -520,4 +520,36 @@
     top: 255px;
   }
 }
+
+.testimonials-header {
+  /*background-color: red;*/
+  font-size: 50px;
+  text-align: center;
+}
+
+.person1-container{
+  width: 27%;
+  /*background-color: red;*/
+  position: relative;
+  left: 10%;
+  text-align: center;
+  font-size: 1.2em;
+  top: -15px;
+}
+
+.person1 {
+  display: inline-block;
+  width: 75%;
+
+}
+
+.testimonial-para1 {
+  width: 70%;
+  height: 40%;
+  text-align: left;
+  position: relative;
+  top: 0px;
+  left: 16%;
+}
+
 /* Smallest screen is 320px*/
