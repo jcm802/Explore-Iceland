@@ -521,25 +521,34 @@
   }
 }
 
+.image-container-4 {
+  width: 100%;
+  height: 650px;
+  /*background-color: red;*/
+  position: relative;
+}
+
 .testimonials-header {
   /*background-color: red;*/
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
   letter-spacing: 2px;
+  font-weight: 100;
 }
 
 .person1-container{
-  width: 22%;
-  /*background-color: red;*/
-  position: relative;
-  left: 10%;
+  width: 25%;
+  /*background-color: blue;*/
+  display: inline-block;
   text-align: center;
   font-size: 1.2em;
-  top: -15px;
+  margin-left: 10%;
+  position: absolute;
+  font-weight: 100;
+  
 }
 
 .person1 {
-  
   width: 72%;
 
 }
@@ -549,17 +558,19 @@
   height: 40%;
   text-align: left;
   position: relative;
-  top: 0px;
-  left: 16%;
+  left: 20%;
+  
 }
 .person2-container{
-  width: 22%;
+  width: 25%;
   /*background-color: red;*/
   left: 38%;
   text-align: center;
   font-size: 1.2em;
-  position: relative;
-  top: -435px;
+  display: inline-block;
+  position: absolute;
+  left: 37.5%;
+  font-weight: 100;
 }
 
 .person2 {
@@ -570,19 +581,19 @@
   width: 60%;
   height: 40%;
   text-align: left;
-  position: relative;
-  top: 0px;
-  left: 16%;
+  
 }
 
 .person3-container{
-  width: 22%;
+  width: 25%;
   /*background-color: red;*/
   left: 65%;
   text-align: center;
   font-size: 1.2em;
-  position: relative;
-  top: -945px;
+  display: inline-block;
+  position: absolute;
+  font-weight: 100;
+  
 }
 
 .person3 {
@@ -593,9 +604,7 @@
   width: 60%;
   height: 40%;
   text-align: left;
-  position: relative;
-  top: 0px;
-  left: 16%;
+  
 }
 
 /* Smallest screen is 320px*/
