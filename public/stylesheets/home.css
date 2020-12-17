@@ -215,6 +215,58 @@
   left: 120px;
 }
 
+.testimonials-header {
+  /*background-color: red;*/
+  font-size: 45px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+.person1-container{
+  /*background-color: blue;*/
+  display: inline-block;
+  text-align: center;
+  font-size: 1.2em;
+  margin-left: 10%;
+  position: absolute;
+  font-weight: 100;
+  
+}
+
+
+.person2-container{
+
+  /*background-color: red;*/
+  left: 38%;
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
+  position: absolute;
+  font-weight: 100;
+}
+
+
+
+.person3-container{
+  width: 25%;
+  /*background-color: red;*/
+  left: 65%;
+  text-align: center;
+  font-size: 1.2em;
+  display: inline-block;
+  position: absolute;
+  font-weight: 100;
+  
+}
+
+
+/* ==================
+
+   MEDIA SCREEN 1271px
+
+  ================== */
+
 @media only screen and (max-width: 1271px) {
   .image1-content p {
     font-size: 23px;
@@ -231,8 +283,15 @@
     width: 280px;
     height: 280px;
   }
-
 }
+
+
+
+/* ==================
+
+   MEDIA SCREEN 1132px
+
+  ================== */
 
 @media only screen and (max-width: 1132px) {
   .image1-content p {
@@ -270,6 +329,12 @@
   }  
 }
 
+/* ==================
+
+   MEDIA SCREEN 1027px
+
+  ================== */
+
 @media only screen and (max-width: 1027px) {
 
   .image1-content p {
@@ -303,7 +368,34 @@
     visibility: hidden;
   }
 
+.testimonials-header {
+  font-size: 45px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 100;
 }
+
+.person1-container{
+ left: 15%;
+}
+
+
+.person2-container{
+  margin-left: 12%;
+}
+
+
+.person3-container{
+  visibility: hidden;
+}
+
+}
+
+/* ==================
+
+   MEDIA SCREEN 850px
+
+  ================== */
 
 @media only screen and (max-width: 850px) {
 
@@ -359,6 +451,12 @@
   }
 
 }
+
+/* ==================
+
+   MEDIA SCREEN 636px
+
+  ================== */
 
 @media only screen and (max-width: 636px) {
 
@@ -420,6 +518,12 @@
     margin-left: 1%;
   }
 }
+
+/* ==================
+
+   MEDIA SCREEN 479px
+
+  ================== */
 
 @media only screen and (max-width: 479px) {
   .headlines {
@@ -556,9 +660,9 @@
 .testimonial-para1 {
   width: 70%;
   height: 40%;
-  text-align: left;
+  text-align: center;
   position: relative;
-  left: 20%;
+  left: 14%;
   
 }
 .person2-container{
