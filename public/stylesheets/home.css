@@ -215,6 +215,12 @@
   left: 120px;
 }
 
+.image-container-4 {
+  width: 100%;
+  /*background-color: black;*/
+  position: relative;
+}
+
 .testimonials-header {
   /*background-color: red;*/
   font-size: 45px;
@@ -224,33 +230,49 @@
 }
 
 .person1-container{
-  /*background-color: blue;*/
-  display: inline-block;
+  width: 25%;
+  /*background-color: green;*/
   text-align: center;
   font-size: 1.2em;
   margin-left: 10%;
   position: absolute;
   font-weight: 100;
-  
 }
 
+.person1 {
+  width: 72%;
+  margin-bottom: 25px;
+}
 
+.testimonial-para1 {
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  padding-bottom: 90px;
+  
+}
 .person2-container{
-
-  /*background-color: red;*/
+  width: 25%;
+  /*background-color: green;*/
   left: 38%;
   text-align: center;
   font-size: 1.2em;
   display: inline-block;
   position: absolute;
+  left: 37.5%;
   font-weight: 100;
 }
 
-
+.person2 {
+  width: 72%;
+  margin-bottom: 25px;
+}
 
 .person3-container{
   width: 25%;
-  /*background-color: red;*/
+  /*background-color: green;*/
   left: 65%;
   text-align: center;
   font-size: 1.2em;
@@ -260,6 +282,23 @@
   
 }
 
+.person3 {
+  width: 72%;
+  margin-bottom: 25px;
+}
+
+/* ====================================
+   ==================
+   ====================================
+   ==================
+
+   RESPONSIVE SCALING
+
+   ===============================
+   ==================
+   =============================
+   ==================*/
+
 
 /* ==================
 
@@ -268,6 +307,7 @@
   ================== */
 
 @media only screen and (max-width: 1271px) {
+
   .image1-content p {
     font-size: 23px;
   }
@@ -283,6 +323,7 @@
     width: 280px;
     height: 280px;
   }
+
 }
 
 
@@ -294,6 +335,7 @@
   ================== */
 
 @media only screen and (max-width: 1132px) {
+
   .image1-content p {
     font-size: 17px;  
   }
@@ -327,6 +369,7 @@
   .image2-content-images {
     left: -10%;
   }  
+
 }
 
 /* ==================
@@ -368,26 +411,42 @@
     visibility: hidden;
   }
 
-.testimonials-header {
-  font-size: 45px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
+  .testimonials-header {
+    font-size: 45px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
 
-.person1-container{
- left: 15%;
-}
+  .image-container-4 {
+    width: 100%;
+    position: relative;
+  }
 
+  .person1 {
+    width: 100%;
+  }
 
-.person2-container{
-  margin-left: 12%;
-}
+  .person1-container{
+   left: 10%;
+  }
 
+  .testimonial-para1 {
+    width: 100%;
+    left: 0.1%;
+  }
 
-.person3-container{
-  visibility: hidden;
-}
+  .person2 {
+    width: 100%;
+  }
+
+  .person2-container{
+    left: 50%;
+  }
+
+  .person3-container{
+    visibility: hidden;
+  }
 
 }
 
@@ -420,7 +479,7 @@
 
   .image1-content p {
     font-size: 14px;
-    }
+  }
 
   .explore-image-lg {
     width: 18%;
@@ -448,6 +507,52 @@
 
   .free-para1 {
     margin-left: 5%;
+  }
+
+  .testimonials-header {
+    font-size: 40px;
+  }
+
+    .image-container-4 {
+    width: 100%;
+    position: relative;
+  }
+
+  .person1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person1-container{
+   left: -2%;
+   font-size: 1em;
+  }
+
+  .testimonial-para1 {
+    width: 100%;
+    left: 0.1%;
+  }
+
+  .person2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person2-container{
+    left: 38%;
+    font-size: 1em;
+  }
+
+
+  .person3-container{
+    visibility: visible;
+    left: 68%;
+    font-size: 1em;
+  }
+
+  .person3 {
+    width: 100%;
+    margin-bottom: 10px;
   }
 
 }
@@ -497,7 +602,6 @@
   }
 
   .headlines {
-    /*background: red;*/
     width: 40%;
     position: relative;
     top: 30%;
@@ -517,6 +621,48 @@
   .free-para1 {
     margin-left: 1%;
   }
+
+  .testimonials-header {
+  font-size: 35px;
+  }
+
+  .image-container-4 {
+  width: 100%;
+  position: relative;
+  }
+
+  .person1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person1-container{
+   width: 30%;
+   left: 5%;
+   font-size: 1em;
+  }
+
+  .testimonial-para1 {
+    width: 100%;
+    left: 0.1%;
+  }
+
+  .person2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person2-container{
+    width: 30%;
+    left: 55%;
+    font-size: 1em;
+  }
+
+
+  .person3-container{
+    visibility: hidden;
+  }
+
 }
 
 /* ==================
@@ -526,8 +672,8 @@
   ================== */
 
 @media only screen and (max-width: 479px) {
+
   .headlines {
-    /*background: red;*/
     width: 16%;
     position: relative;
     top: 30%;
@@ -623,92 +769,66 @@
   .image-para3 {
     top: 255px;
   }
+
+  .testimonials-header {
+    font-size: 30px;
+  }
+
+    .image-container-4 {
+    width: 100%;
+    position: relative;
+  }
+
+  .testimonials-header {
+    font-size: 37px;
+  }
+
+  .person1 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person1-container{
+   width: 50%;
+   left: 14%;
+   font-size: 1em;
+  }
+
+  .testimonial-para1 {
+    width: 100%;
+    left: 0.1%;
+  }
+
+  .person2 {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .person2-container {
+    visibility: hidden;
+  }
+
+  .person3-container {
+    visibility: hidden;
+  }
+
 }
 
-.image-container-4 {
-  width: 100%;
-  height: 650px;
-  /*background-color: red;*/
-  position: relative;
-}
+/* Smallest screen 320px*/
+@media only screen and (max-width: 320px) {
 
-.testimonials-header {
-  /*background-color: red;*/
-  font-size: 45px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-weight: 100;
-}
+  .testimonials-header {
+   font-size: 25px;
+  }
 
-.person1-container{
-  width: 25%;
-  /*background-color: blue;*/
-  display: inline-block;
-  text-align: center;
-  font-size: 1.2em;
-  margin-left: 10%;
-  position: absolute;
-  font-weight: 100;
-  
-}
+  .person1-container {
+   left: 14%;
+   font-size: 1em;
+  }
 
-.person1 {
-  width: 72%;
+  .testimonial-para1 {
+    width: 130%;
+    left: -15%;
+  }
 
 }
-
-.testimonial-para1 {
-  width: 70%;
-  height: 40%;
-  text-align: center;
-  position: relative;
-  left: 14%;
-  
-}
-.person2-container{
-  width: 25%;
-  /*background-color: red;*/
-  left: 38%;
-  text-align: center;
-  font-size: 1.2em;
-  display: inline-block;
-  position: absolute;
-  left: 37.5%;
-  font-weight: 100;
-}
-
-.person2 {
-  width: 72%;
-}
-
-.testimonial-para2 {
-  width: 60%;
-  height: 40%;
-  text-align: left;
-  
-}
-
-.person3-container{
-  width: 25%;
-  /*background-color: red;*/
-  left: 65%;
-  text-align: center;
-  font-size: 1.2em;
-  display: inline-block;
-  position: absolute;
-  font-weight: 100;
-  
-}
-
-.person3 {
-  width: 72%;
-}
-
-.testimonial-para3 {
-  width: 60%;
-  height: 40%;
-  text-align: left;
-  
-}
-
-/* Smallest screen is 320px*/
