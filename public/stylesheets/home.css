@@ -111,10 +111,10 @@ body {
   left: 75%;
 }
 
-.text-container-2 div p {
-  margin: 2%;
+.text-container-2 {
+  text-align: center;
+  padding: 10px;
 }
-
 
 .image-container-3 {
   /*background: blue;*/
