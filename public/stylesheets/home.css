@@ -113,7 +113,7 @@ body {
 
 .text-container-2 {
   text-align: center;
-  padding: 10px;
+  padding: 0 100px 0 100px;
 }
 
 .image-container-3 {
@@ -467,6 +467,11 @@ body {
 
   .book-image-lg {
     width: 18%;
+  }
+
+  .text-container-2 {
+    text-align: center;
+    padding: 0 20px 0 20px;
   }
 
   .image1-content-images {
