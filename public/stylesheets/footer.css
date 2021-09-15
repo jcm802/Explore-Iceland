@@ -1,0 +1,96 @@
+  footer {
+    width: 100%;
+    height: 150px;
+    background-color: #5A6978;
+    display: inline-block;
+  }
+  
+  /* Footer column orientation */
+  .footer-column {
+    float: left;
+    width: 20%;
+    padding: 20px;
+  }
+  
+  .footer-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer copyright container */
+  footer .footer-row .footer-column:first-child {
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+  }
+  
+  /* Footer Social Media Logo 'Follow Us' */
+  footer .footer-row .footer-column:last-child {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Footer Social Media Logos */
+  footer .footer-row .footer-column i {
+    margin-top: -10px;
+    font-size: 30px;
+    padding: 3px;
+  }
+
+  .footer-iceland-logo {
+    width: 110px;
+    display: block;
+    position: relative;
+    top: 10px;
+    left: 7px;
+  }
+
+  .footer-logo-title {
+    font-family: Domine;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: 15px;
+  }
+
+  @media only screen and (max-width: 850px) {
+
+    /* Center the footer elements to scale */
+  footer {
+    height: 500px;
+    text-align: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .footer-iceland-logo {
+    width: 110px;
+    display: inline-block;
+    position: relative;
+    left: 65px;
+    top: -20px;
+  }
+
+  .footer-logo-title {
+    font-family: Domine;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 5px;
+    right: 55px;
+  }
+
+  /* Positioning address for scaling */
+  footer .footer-row .footer-column:nth-child(3){
+    position: relative;
+    top: 10px;
+  }
+  }

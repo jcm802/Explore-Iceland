@@ -1,3 +1,18 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #343F4B;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+             0px 8px 13px rgba(0,0,0,0.1),
+             0px 18px 23px rgba(0,0,0,0.1);
+}
+
 .image-container-1 {
   /*background: blue;*/
   position: relative;
@@ -38,23 +53,23 @@
   font-size: 45px;
   position: absolute;
   top: 50%;
-  left: 150%;
-  margin-left: 60px;
+  left: 155%;
+  margin-left: 65px;
 }
 
 .plan-headline {
   font-size: 45px;
   position: absolute;
   top: 50%;
-  left: 95%;
-  margin-left: 40px;
+  left: 105%;
+  margin-left: 4px;
 }
 
 .book-headline {
   font-size: 45px;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 45%;
 }
 
 .image1-content-images {
@@ -78,7 +93,6 @@
   position: absolute;
   top: 20px;
   left: 10%;
-  
 }
 
 .plan-image-lg {
@@ -97,31 +111,10 @@
   left: 75%;
 }
 
-.text-container-2 {
-  height: 280px;
-  font-size: 20px;
-  padding: 70px;
+.text-container-2 div p {
+  margin: 2%;
 }
 
-.text-container-2 div {
-  display: inline-block;
-  float: left;
-  width: 280px;
-  height: 280px;
-  margin-top: 25px
-}
-
-.free-para1 {
-  margin-left: 7%;
-}
-
-.free-para2 {
-  margin-left: 30px;
-}
-
-.free-para3 {
-  margin-left: 40px;
-}
 
 .image-container-3 {
   /*background: blue;*/
@@ -168,7 +161,7 @@
 .image2-content-images {
   position: absolute;
   top: 50px;
-  left: 340px;
+  left: 325px;
 }
 
 .explore-image-md {
@@ -219,7 +212,10 @@
   width: 100%;
   /*background-color: black;*/
   position: relative;
+  height: 550px;
 }
+
+/* Testimonials */
 
 .testimonials-header {
   /*background-color: red;*/
@@ -234,7 +230,7 @@
   /*background-color: green;*/
   text-align: center;
   font-size: 1.2em;
-  margin-left: 10%;
+  margin-left: 11%;
   position: absolute;
   font-weight: 100;
 }
@@ -287,6 +283,8 @@
   margin-bottom: 25px;
 }
 
+
+
 /* ====================================
    ==================
    ====================================
@@ -308,20 +306,16 @@
 
 @media only screen and (max-width: 1271px) {
 
+  .person1-container {
+    left: 0%;
+  }
+
+  .person3-container {
+    left: 64%;
+  }
+
   .image1-content p {
     font-size: 23px;
-  }
-
-  .text-container-2 {
-    font-size: 20px;
-    padding: 30px;
-  }
-
-  .text-container-2 div {
-    display: inline-block;
-    margin-right: 10px;
-    width: 280px;
-    height: 280px;
   }
 
 }
@@ -335,22 +329,13 @@
   ================== */
 
 @media only screen and (max-width: 1132px) {
+  
+  .explore-headline {
+    left:150%;
+  }
 
   .image1-content p {
     font-size: 17px;  
-  }
-
-  .free-para3 {
-    visibility: hidden;
-  }
-
-  .free-para1 {
-    margin-left: 15%;
-  }
-
-  .text-container-2 div {
-    float:none;
-    display: inline-block;
   }
 
   .image2-content h1 {
@@ -370,6 +355,10 @@
     left: -10%;
   }  
 
+  .person1-container {
+    left: 1%;
+  }
+
 }
 
 /* ==================
@@ -386,29 +375,14 @@
 
   .explore-headline {
     font-size: 40px;
+    left:148%;
   }
-
   .plan-headline {
     font-size: 40px;
   }
 
   .book-headline {
     font-size: 40px;
-  }
-
-  .text-container-2 div {
-    width: 80%;
-    text-align: left;
-    margin-top: 65px;
-    font-size: 25px;
-  }
-
-  .free-para1 {
-    margin-left: 10%;
-  }
-
-  .free-para2 {
-    visibility: hidden;
   }
 
   .testimonials-header {
@@ -467,10 +441,12 @@
 
   .explore-headline {
     font-size: 27px;
+    left: 148%;
   }
 
   .plan-headline {
     font-size: 27px;
+    left: 110%;
   }
 
   .book-headline {
@@ -498,23 +474,13 @@
     top: 120%;
   }
 
-  .text-container-2 div {
-    width: 90%;
-    text-align: left;
-    margin-top: 50px;
-    font-size: 25px;
-  }
-
-  .free-para1 {
-    margin-left: 5%;
-  }
-
   .testimonials-header {
     font-size: 40px;
   }
 
-    .image-container-4 {
+  .image-container-4 {
     width: 100%;
+    height: 450px;
     position: relative;
   }
 
@@ -524,7 +490,7 @@
   }
 
   .person1-container{
-   left: -2%;
+   left: -3%;
    font-size: 1em;
   }
 
@@ -576,12 +542,12 @@
 
   .explore-headline {
     font-size: 22px;
-    left: 145%;
+    left: 140%;
   }
 
   .plan-headline {
     font-size: 22px;
-    left: 88%;
+    left: 105%;
   }
 
   .book-headline {
@@ -610,16 +576,6 @@
 
   .image1 {
     height: 250px;
-  }
-
-  .text-container-2 div {
-    width: 100%;
-    text-align: left;
-    margin-top: 35px;
-  }
-
-  .free-para1 {
-    margin-left: 1%;
   }
 
   .testimonials-header {
@@ -691,7 +647,7 @@
 
   .explore-headline {
     font-size: 22px;
-    left: 119%;
+    left: 110%;
   }
 
   .explore-image-lg {
@@ -713,17 +669,6 @@
     width: 30%;
     left: 46%;
     top: 10%;
-  }
-
-  .text-container-2 div {
-    width: 100%;
-    text-align: left;
-    margin-top: 35px;
-    font-size: 20px;
-  }
-
-  .free-para1 {
-    margin-left: 1%;
   }
 
   .image2-content-images {
@@ -790,7 +735,7 @@
 
   .person1-container{
    width: 50%;
-   left: 14%;
+   left: 15%;
    font-size: 1em;
   }
 
@@ -816,6 +761,24 @@
 
 /* Smallest screen 320px*/
 @media only screen and (max-width: 320px) {
+
+  .headlines {
+    left: 1%;
+  }
+
+  .image1-content-images {
+    left: 8%;
+    top: 110%;
+  }
+
+  .book-image-lg {
+    width: 30%;
+    left: 130px;
+  }
+
+  .image-container-4 {
+    height: 350px;
+  }
 
   .testimonials-header {
    font-size: 25px;
