@@ -14,7 +14,6 @@ body {
 }
 
 .image-container-1 {
-  /*background: blue;*/
   position: relative;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -25,7 +24,6 @@ body {
 }
 
 .image1-content {
-  /*background: blue;*/
   width: 100%;
   position: absolute;
   top: 10%;
@@ -35,18 +33,19 @@ body {
 
 .image1-content p {
   width: 100%;
+  height: 10px;
   font-size: 25px;
-  margin-top: 90px;
+  padding-top: 60px;
   word-spacing: 5px;
+  box-sizing: border-box;
 }
 
 .headlines {
-  background: red;
   width: 40%;
   position: relative;
-  top: 30%;
+  top: 50%;
   left: 0%;
-
+  margin-top: 100px;
 }
 
 .explore-headline {
@@ -73,10 +72,9 @@ body {
 }
 
 .image1-content-images {
-  /*background-color: blue;*/
   display: block;
   width: 80%;
-  height: 180%;
+  height: auto;
   position: absolute;
   top: 140%;
   left: 6%;
@@ -87,7 +85,7 @@ body {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
 }
 
-.explore-image-lg {
+.book-image-lg {
   display: inline-block;
   width: 20%;
   position: absolute;
@@ -103,7 +101,7 @@ body {
   left: 45%;
 }
 
-.book-image-lg {
+.explore-image-lg {
   display: inline-block;
   width: 20%;
   position: absolute;
@@ -117,7 +115,6 @@ body {
 }
 
 .image-container-3 {
-  /*background: blue;*/
   position: relative;
   text-align: center;
   font-family: 'Lato', sans-serif;
@@ -210,7 +207,6 @@ body {
 
 .image-container-4 {
   width: 100%;
-  /*background-color: black;*/
   position: relative;
   height: 550px;
 }
@@ -218,7 +214,6 @@ body {
 /* Testimonials */
 
 .testimonials-header {
-  /*background-color: red;*/
   font-size: 45px;
   text-align: center;
   letter-spacing: 2px;
@@ -227,7 +222,6 @@ body {
 
 .person1-container{
   width: 25%;
-  /*background-color: green;*/
   text-align: center;
   font-size: 1.2em;
   margin-left: 11%;
@@ -251,7 +245,6 @@ body {
 }
 .person2-container{
   width: 25%;
-  /*background-color: green;*/
   left: 38%;
   text-align: center;
   font-size: 1.2em;
@@ -268,7 +261,6 @@ body {
 
 .person3-container{
   width: 25%;
-  /*background-color: green;*/
   left: 65%;
   text-align: center;
   font-size: 1.2em;
@@ -306,6 +298,15 @@ body {
 
 @media only screen and (max-width: 1271px) {
 
+  .headlines {
+    margin-top: 60px;
+  }
+ 
+
+  .explore-image-lg {
+    left: 77%;
+  }
+
   .person1-container {
     left: 0%;
   }
@@ -334,8 +335,12 @@ body {
     left:150%;
   }
 
+  .explore-image-lg {
+    left: 76%;
+  }
+
   .image1-content p {
-    font-size: 17px;  
+    font-size: 20px;  
   }
 
   .image2-content h1 {
@@ -370,7 +375,12 @@ body {
 @media only screen and (max-width: 1027px) {
 
   .image1-content p {
-      font-size: 15px;  
+      font-size: 20px;  
+  }
+
+  .image1-content-images {
+    left: 6%;
+    top: 134%;
   }
 
   .explore-headline {
@@ -439,34 +449,42 @@ body {
       left: 20%;
   }
 
-  .explore-headline {
-    font-size: 27px;
-    left: 148%;
-  }
-
-  .plan-headline {
-    font-size: 27px;
-    left: 110%;
+  .headlines {
+    left: -2%;
   }
 
   .book-headline {
-    font-size: 27px;
+    font-size: 33px;
+  }
+
+  .explore-headline {
+    left: 153%;
+    font-size: 33px;
+  }
+
+  .plan-headline {
+    left: 110%;
+    font-size: 33px;
   }
 
   .image1-content p {
-    font-size: 14px;
-  }
-
-  .explore-image-lg {
-    width: 18%;
-  }
-
-  .plan-image-lg {
-    width: 18%;
+    font-size: 17px;
   }
 
   .book-image-lg {
-    width: 18%;
+    width: 20%;
+    top: 15%;
+  }
+
+  .plan-image-lg {
+    width: 20%;
+    top: 15%;
+  }
+
+  .explore-image-lg {
+    width: 20%;
+    top: 15%;
+    left: 77%;
   }
 
   .text-container-2 {
@@ -475,8 +493,8 @@ body {
   }
 
   .image1-content-images {
-    left: 8%;
-    top: 120%;
+    left: 6%;
+    top: 145%;
   }
 
   .testimonials-header {
@@ -530,19 +548,50 @@ body {
 
 /* ==================
 
-   MEDIA SCREEN 636px
+   MEDIA SCREEN 750px
 
   ================== */
 
-@media only screen and (max-width: 636px) {
-
-  .image1-content p {
-    font-size: 11px;
+@media only screen and (max-width: 750px) {
+  .explore-image-lg {
+    left: 79%;
   }
 
   .image1-content-images {
+    top: 135%;
     left: 5%;
-    top: 110%;
+  }
+  .book-headline{
+   font-size: 27px;
+  }
+
+  .plan-headline {
+    font-size: 27px;
+  }
+
+  .explore-headline {
+    font-size: 27px;
+  }
+
+  
+}
+
+/* ==================
+
+   MEDIA SCREEN 660px
+
+  ================== */
+
+@media only screen and (max-width: 660px) {
+
+  .image1-content p {
+    font-size: 14px;
+  }
+
+  .image1-content-images {
+    left: 12%;
+    top: 128%;
+    width: 65%;
   }
 
   .explore-headline {
@@ -556,12 +605,13 @@ body {
   }
 
   .book-headline {
-    left: 42%;
     font-size: 22px;
+    left: 42%;
   }
 
   .explore-image-lg {
     width: 23%;
+    left: 85%;
   }
 
   .plan-image-lg {
@@ -570,13 +620,14 @@ body {
 
   .book-image-lg {
     width: 23%;
+    left: 5%;
   }
 
   .headlines {
     width: 40%;
     position: relative;
     top: 30%;
-    left: -1%;
+    left: 1%;
   }
 
   .image1 {
@@ -628,51 +679,88 @@ body {
 
 /* ==================
 
+   MEDIA SCREEN 590px
+
+  ================== */
+
+  @media only screen and (max-width: 590px) {
+      .image1-content-images {
+        left: 13%;
+        top: 130%;
+      }
+  }
+
+/* ==================
+
+   MEDIA SCREEN 530px
+
+  ================== */
+
+  @media only screen and (max-width: 530px) {
+    
+    .headlines {
+      left: -2%;
+    }
+
+    .image1-content-images {
+      left: 12%;
+    }
+}
+
+/* ==================
+
    MEDIA SCREEN 479px
 
   ================== */
 
 @media only screen and (max-width: 479px) {
 
+  .image1-content p {
+    font-size: 14px;
+  }
+
   .headlines {
     width: 16%;
     position: relative;
     top: 30%;
-    left: 17%;
+    left: 20%;
   }
 
   .image1-content-images {
-    left: 14%;
-    top: 110%;
+    left: 13%;
+    top: 130%;
+  }
+
+  .book-headline {
+    font-size: 22px;
+    left: -30%;
   }
 
   .plan-headline {
-    visibility: hidden;
+    font-size: 22px;
+    left: 90px;
   }
 
   .explore-headline {
     font-size: 22px;
-    left: 110%;
-  }
-
-  .explore-image-lg {
-    width: 30%;
-    left: 30px;
-    top: 10%;
-  }
-
-  .plan-image-lg {
-   visibility: hidden;
-  }
-
-  .book-headline {
-    left: 40%;
-    font-size: 22px;
+    left: 140px;
   }
 
   .book-image-lg {
-    width: 30%;
-    left: 46%;
+    width: 25%;
+    top: 10%;
+    left: 0;
+  }
+
+  .plan-image-lg {
+    width: 25%;
+    left: 130px;
+    top: 10%;
+  }
+
+  .explore-image-lg {
+    width: 25%;
+    left: 245px;
     top: 10%;
   }
 
@@ -764,21 +852,131 @@ body {
 
 }
 
-/* Smallest screen 320px*/
-@media only screen and (max-width: 320px) {
+/* ==================
 
-  .headlines {
-    left: 1%;
+   MEDIA SCREEN 442px
+
+  ================== */
+
+  @media only screen and (max-width: 442px) {
+    .image1-content-images {
+      left: 10%;
+    }
+
+    .headlines {
+      left: 15%;
+    }
+  }
+
+  /* ==================
+
+   MEDIA SCREEN 400px
+
+  ================== */
+
+  @media only screen and (max-width: 400px) {
+    
+    .headlines {
+      left: 15%;
+    }
+
+    .image1-content-images {
+      left: 10%;
+    }
+  }
+
+    /* ==================
+
+   MEDIA SCREEN 380px
+
+  ================== */
+
+
+  @media only screen and (max-width: 380px) {
+    
+    .headlines {
+      left: 13%;
+    }
+
+    .book-headline{
+      font-size: 20px;
+      margin-left: 15%;
+    }
+
+    .plan-headline{
+      font-size: 20px;
+      margin-left: 10%;
+    }
+
+    .explore-headline{
+      font-size: 20px;
+      margin-left: 88%;
+    }
+
+    .book-image-lg {
+      left: 10%;
+    }
+
+    .plan-image-lg {
+      left: 52%;
+    }
+
+    .explore-image-lg {
+      left: 95%;
+    }
+
+
+
+    .image1-content-images {
+      left: 6%;
+    }
+  }
+
+/* ==================
+
+   MEDIA SCREEN 360px
+
+  ================== */
+
+  @media only screen and (max-width: 360px) {
+    
+
+
+  }
+
+/* Smallest screen 340px*/
+@media only screen and (max-width: 340px) {
+
+  .image-container-1 p {
+    font-size: 12px;
   }
 
   .image1-content-images {
     left: 8%;
-    top: 110%;
+    top: 129%;
   }
 
   .book-image-lg {
     width: 30%;
-    left: 130px;
+    left: 2%;
+  }
+
+  .plan-image-lg {
+    width: 30%;
+    left: 48%;
+  }
+
+  .explore-image-lg {
+    width: 30%;
+    left: 93%;
+  }
+
+  .plan-headline {
+    margin-left: -7%;
+  }
+
+  .explore-headline {
+    margin-left: 65%;
   }
 
   .image-container-4 {
