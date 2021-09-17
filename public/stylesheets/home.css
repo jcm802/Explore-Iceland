@@ -32,12 +32,13 @@ body {
 }
 
 .image1-content p {
-  width: 100%;
+  width: 90%;
   height: 10px;
   font-size: 25px;
   padding-top: 60px;
   word-spacing: 5px;
   box-sizing: border-box;
+  margin: 0 auto;
 }
 
 .headlines {
