@@ -1,13 +1,19 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
 .map-container {
     width: 100%;
-    height: 600px;
+    height: 425px;
     text-align: center;
     overflow: hidden;
 }
 
 .map {
     width: 100%;
-    height: 700px;
+    height: 480px;
     border: none;
     margin-top: -53px;
 }
