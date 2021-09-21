@@ -25,6 +25,7 @@ body {
 
 .image1-content {
   width: 100%;
+  height: 75px;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -33,12 +34,11 @@ body {
 
 .image1-content p {
   width: 90%;
-  height: 10px;
+  height: 30px;
   font-size: 25px;
-  padding-top: 80px;
   word-spacing: 5px;
   box-sizing: border-box;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .headlines {
@@ -46,7 +46,7 @@ body {
   position: relative;
   top: 50%;
   left: 0%;
-  margin-top: 100px;
+  margin-top: 65px;
 }
 
 .explore-headline {
@@ -55,6 +55,7 @@ body {
   top: 50%;
   left: 155%;
   margin-left: 65px;
+  color: white;
 }
 
 .plan-headline {
@@ -77,11 +78,12 @@ body {
   width: 80%;
   height: auto;
   position: absolute;
-  top: 140%;
+  top: 215px;
   left: 6%;
   bottom: 40px;
 }
 
+/* Using filter to change color of images from original colour of png */
 .image1-content-images img {
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
 }
@@ -90,7 +92,6 @@ body {
   display: inline-block;
   width: 20%;
   position: absolute;
-  top: 20px;
   left: 10%;
 }
 
@@ -98,7 +99,6 @@ body {
   display: inline-block;
   width: 20%;
   position: absolute;
-  top: 20px;
   left: 45%;
 }
 
@@ -106,7 +106,6 @@ body {
   display: inline-block;
   width: 20%;
   position: absolute;
-  top: 20px;
   left: 75%;
 }
 
@@ -127,7 +126,6 @@ body {
 }
 
 .image2-content {
-  /*background: blue;*/
   position: absolute;
   top: 36%;
   left: 50%;
@@ -212,7 +210,10 @@ body {
   height: 550px;
 }
 
-/* Testimonials */
+
+/* =========
+  Testimonials 
+  ============ */
 
 .testimonials-header {
   font-size: 45px;
@@ -300,9 +301,12 @@ body {
 @media only screen and (max-width: 1271px) {
 
   .headlines {
-    margin-top: 60px;
+    margin-top: -25px;
   }
  
+  .image1-content-images {
+    top: 170px;
+  }
 
   .explore-image-lg {
     left: 77%;
@@ -381,7 +385,7 @@ body {
 
   .image1-content-images {
     left: 6%;
-    top: 134%;
+    top: 160px;
   }
 
   .explore-headline {
@@ -470,7 +474,12 @@ body {
 
   .image1-content p {
     font-size: 17px;
+    height: 30px;
   }
+
+  .image-content {
+    height: 30px;
+  };
 
   .book-image-lg {
     width: 20%;
@@ -495,7 +504,6 @@ body {
 
   .image1-content-images {
     left: 6%;
-    top: 145%;
   }
 
   .testimonials-header {
@@ -558,8 +566,11 @@ body {
     left: 79%;
   }
 
+  .image1-content {
+    height: 90px;
+  }
+
   .image1-content-images {
-    top: 135%;
     left: 5%;
   }
   .book-headline{
@@ -587,12 +598,11 @@ body {
 
   .image1-content p {
     font-size: 14px;
-    padding-top: 60px;
   }
 
   .image1-content-images {
     left: 12%;
-    top: 128%;
+    top: 135px;
     width: 65%;
   }
 
@@ -628,8 +638,8 @@ body {
   .headlines {
     width: 40%;
     position: relative;
-    top: 30%;
     left: 1%;
+    margin-top: -30px
   }
 
   .image1 {
@@ -676,7 +686,6 @@ body {
   .person3-container{
     visibility: hidden;
   }
-
 }
 
 /* ==================
@@ -688,7 +697,6 @@ body {
   @media only screen and (max-width: 590px) {
       .image1-content-images {
         left: 13%;
-        top: 130%;
       }
   }
 
@@ -723,14 +731,11 @@ body {
 
   .headlines {
     width: 16%;
-    position: relative;
-    top: 30%;
     left: 20%;
   }
 
   .image1-content-images {
     left: 13%;
-    top: 130%;
   }
 
   .book-headline {
@@ -750,20 +755,17 @@ body {
 
   .book-image-lg {
     width: 25%;
-    top: 10%;
     left: 0;
   }
 
   .plan-image-lg {
     width: 25%;
     left: 130px;
-    top: 10%;
   }
 
   .explore-image-lg {
     width: 25%;
     left: 245px;
-    top: 10%;
   }
 
   .image2-content-images {
@@ -936,18 +938,6 @@ body {
     }
   }
 
-/* ==================
-
-   MEDIA SCREEN 360px
-
-  ================== */
-
-  @media only screen and (max-width: 360px) {
-    
-
-
-  }
-
 /* Smallest screen 340px*/
 @media only screen and (max-width: 340px) {
 
@@ -957,7 +947,6 @@ body {
 
   .image1-content-images {
     left: 8%;
-    top: 129%;
   }
 
   .book-image-lg {

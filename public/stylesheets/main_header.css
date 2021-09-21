@@ -23,13 +23,11 @@ z-index: 1;
 }
 
 .header {
-  /*background-color: #333;*/
 	height: 150px;
 	position: relative;
 }
 
 .header-nav {
-	/*background-color: red;*/
 	height: 25px;
 	width: 100%;
 	font-size: 15px;
@@ -39,11 +37,19 @@ z-index: 1;
 }
 
 .nav-options {
-	/*background-color: blue;*/
-	height: 15px;
 	font-family: 'Lato', sans-serif;
+  height: 30px;
 }
 
+.nav-options a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.nav-options a:hover {
+  color: red;
+}
 .nav-options span {
 	margin-left: 15px;
 	margin-right: 45px;
@@ -54,7 +60,6 @@ z-index: 1;
 }
 
 .extra-nav-container {
-  /*background-color: red;*/
   width: 900px;
   height: 90px;
   position: relative;
@@ -72,7 +77,6 @@ z-index: 1;
 
 
 .title-icons-container {
-  /*background: black;*/
   position: absolute;
   top: 0.5em;
   left: 50px;
@@ -129,14 +133,12 @@ input:focus {
 }
 
 .contact-authentication-container {
-  /*background: yellow;*/
   width: 200px;
   height: 90px;
   float: right;
 }
 
 .about-contact-container {
-  /*background: black;*/
   width: 220px;
   height: 40px;
   padding-top: 10px;
@@ -148,7 +150,6 @@ input:focus {
 }
 
 .login-signup-container {
-  /*background-color: blue;*/
   width: 200px;
   height: 45px;
   font-size: 18px;
@@ -303,7 +304,7 @@ input:focus {
 }
 
 /* 
- We could us `.main-menu:target:after`, but
+ We could use `.main-menu:target:after`,but
  it wouldn't be clickable.
 */
 .main-menu:target + .backdrop,
@@ -402,6 +403,7 @@ input:focus {
     /*background: yellow;*/
     visibility: hidden;
   }
+}
 
 @media only screen and (max-width: 1027px) {
 
@@ -478,5 +480,14 @@ input:focus {
     text-decoration: none;
     color: white;
     }
+}
+
+@media only screen and (max-width: 680px) {
+.search-bar-container input {
+  visibility: hidden;
+}
+
+.search-bar-container label img {
+  visibility: hidden;
 }
 }

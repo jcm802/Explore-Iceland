@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 // Use view engine
 app.set("view engine", "ejs");
 
-// Use stylesheet
+// Use stylesheets from public folder
 app.use(express.static(__dirname + "/public"))
 
 // ======
@@ -46,14 +46,21 @@ app.get("/", (req, res) => {
 });
 
 // ======
-// HOME
+// HOME ROUTE
 // ======
 app.get("/home", (req, res) => {
 	res.render("2_home");
 });
 
 // ======
-// SERVER
+// EXPLORE ROUTE
+// ======
+app.get("/explore", (req, res) => {
+	res.render("3_explore");
+});
+
+// ======
+// SERVER ROUTE
 // ======
 app.listen(process.env.PORT || 3000, () => {
 	console.log("Server on port 3000 started...");

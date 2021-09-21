@@ -1,0 +1,13 @@
+.map-container {
+    width: 100%;
+    height: 545px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.map {
+    width: 100%;
+    height: 700px;
+    border: none;
+    margin-top: -53px;
+}

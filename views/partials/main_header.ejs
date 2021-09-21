@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 		<link rel="stylesheet" href="stylesheets/main_header.css">
 		<link rel="stylesheet" href="stylesheets/home.css">
+		<link rel="stylesheet" href="stylesheets/explore.css">
 		<link rel="shortcut icon" href="/images/header/iceland_flag_index_favicon.ico">
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
 	<body>
 	<div class="header">
 		<div class="top-left">
-			<a href="/"><img class="top-left-image" src="/images/header/iceland_flag_index.png" alt="Explore Iceland Logo"></a>
+			<a href="/home"><img class="top-left-image" src="/images/header/iceland_flag_index.png" alt="Explore Iceland Logo"></a>
 			<span class="logo-title">Explore Iceland</span>
 		</div>
 		<!-- Menu For Tablets and Mobiles -->
@@ -41,8 +42,8 @@
     		<ul>
     			<li><a href="#">Sign In</a></li>
       			<li><a href="#">Login</a></li>
-      			<li><a href="#">Home</a></li>
-      			<li><a href="#">Explore</a></li>
+      			<a href="/home"><li>Home</li></a>
+      			<a href="/explore"><li>Explore</li></a>
       			<li><a href="#">Things To Do</a></li>
       			<li><a href="#">Places To Stay</a></li>
       			<li><a href="#">Facts</a></li>
@@ -104,15 +105,18 @@
 
 			<div class="login-signup-container"></div>
 		</div>
+
+		<!---------
+			MAIN NAV FOR LARGER SCREENS
+		-->
 		<div class="header-nav">
 			<div class="nav-options">
-				<span>home</span>
-				<span>explore</span>
+				<a href="/home" class="home-nav-option"><span>home</span></a>
+				<a href="/explore" class="explore-nav-option"><span>explore</span></a>
 				<span>things to do</span>
 				<span>places to stay</span>
 				<span>facts</span>
 				<span>book</span>
-				<span>shop</span>
 				<span>planner</span>
 				<span class="tel-number">+02795 468 152732</span>
 			</div>
