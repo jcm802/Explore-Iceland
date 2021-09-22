@@ -60,11 +60,9 @@ z-index: 1;
 }
 
 .extra-nav-container {
-  width: 900px;
+  width: 100%;
   height: 90px;
-  position: relative;
-  top: 20px;
-  left: 200px;
+  margin-left: 200px;
   display: inline-block;
   font-family: 'Lato', sans-serif;
 }
@@ -85,13 +83,17 @@ z-index: 1;
 }
 
 .partners-title {
-  position: relative;
-  bottom: 15px;
+  position: absolute;
+  left: 205px;
+  top: 43px;
   font-size: 20px;
 }
 
 .icons {
   display: inline-block;
+  position: absolute;
+  left: 350px;
+  top: 30px;
 }
 
 .icons img {
@@ -99,10 +101,10 @@ z-index: 1;
 }
 
 .search-bar-container {
-  position: relative;
+  position: absolute;
   display: inline-block;
-  bottom: 15px;
-  left: 10px;
+  top: 45px;
+  left: 650px;
 }
 
 .search-bar-container input {
@@ -127,9 +129,9 @@ input:focus {
 
 .search-bar-container label img {
   width: 20px;
-  padding-right: 2px;
-  position: relative;
-  top: 7px;
+  position: absolute;
+  top: 4px;
+  left: -26px;
 }
 
 .contact-authentication-container {
@@ -141,20 +143,24 @@ input:focus {
 .about-contact-container {
   width: 220px;
   height: 40px;
-  padding-top: 10px;
   font-size: 13px;
   box-sizing: border-box;
+  position: absolute;
+  right: 10px;
+  top: 50px;
 }
 .about-contact-container span  {
   margin: 12px;
 }
 
 .login-signup-container {
+  position: absolute;
+  right: 35px;
+  top: 80px;
   width: 200px;
   height: 45px;
   font-size: 18px;
   display: inline-block;
-  padding-top: 10px;
   box-sizing: border-box;
 }
 .login-signup-container span  {
@@ -163,33 +169,6 @@ input:focus {
 
 .contact-authentication-container-1271px {
   visibility: hidden;
-}
-
-.search-bar-container-850px {
-  visibility: hidden;
-  position: relative;
-  display: inline-block;
-  top: 12px;
-}
-
-.search-bar-container-850px input {
-  width: 170px;
-  border: none;
-  border-radius: 5px;
-  background-color: #343F4B;
-  outline: none;
-  color: red;
-  padding: 5px;
-  opacity: 0.5;
-}
-
-.search-bar-container-850px input:focus {
-  background-color: white;
-}
-
-.search-bar-container-850px label img {
-  width: 11px;
-  padding-right: 2px;
 }
 
 /* Screen Reader Only*/
@@ -347,12 +326,12 @@ input:focus {
 @media only screen and (max-width: 1132px) {
 
   .partners-title {
-    position: relative;
+    position: absolute;
     bottom: 35px;
   }
 
   .icons {
-    position: relative;
+    position: absolute;
     bottom: 20px;
   }
 
@@ -366,37 +345,8 @@ input:focus {
     padding: 5px;
 }
 
-
-  .contact-authentication-container-1271px {
-    position: relative;
-    bottom: 15px;
-    visibility: visible;
-  }
-
-  .contact-authentication-container-1271px div {
-    display: inline-block;
-  }
-
-  .contact-authentication-container-1271px span {
-    font-size: 14px;
-    margin-left: 10px;
-    margin-right: 5px;
-  }
-
-  .contact-authentication-container-1271px div i {
-    font-size: 12px;
-  }
-
   .fa-envelope {
     margin-left: -3px;
-  }
-
-  .about-contact-container-1271px {
-    margin-left: -12px;
-  }
-
-  .login-signup-container-1271px {
-    margin-left: -5px;
   }
 
   .contact-authentication-container {
@@ -425,17 +375,17 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 850px) {
-
+@media only screen and (max-width: 900px) {
   .search-bar-container {
-    visibility: visible;
-    left: -400px;
-    top: 45px;
-  }
+    right: 300px;
+    width: 100%;
+    left: 300px;
+    top: 95px;
 
-  .search-bar-container-850px {
-    visibility: hidden;
   }
+}
+
+@media only screen and (max-width: 850px) {
 
   .title-icons-container {
     /*background: black;*/
@@ -446,14 +396,6 @@ input:focus {
 @media only screen and (max-width: 680px) {
 
   .title-icons-container {
-    visibility: hidden;
-  }
-
-  .contact-authentication-container-1271px {
-    visibility: hidden;
-  }
-
-  .search-bar-container-850px {
     visibility: hidden;
   }
 
@@ -483,9 +425,6 @@ input:focus {
 }
 
 @media only screen and (max-width: 680px) {
-.search-bar-container input {
-  visibility: hidden;
-}
 
 .search-bar-container label img {
   visibility: hidden;

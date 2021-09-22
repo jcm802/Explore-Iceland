@@ -6,14 +6,14 @@ body, html {
 
 .map-container {
     width: 100%;
-    height: 425px;
+    height: 545px;
     text-align: center;
     overflow: hidden;
 }
 
 .map {
     width: 100%;
-    height: 480px;
+    height: 600px;
     border: none;
     margin-top: -53px;
 }

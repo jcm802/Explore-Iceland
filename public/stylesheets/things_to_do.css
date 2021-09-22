@@ -1,0 +1,94 @@
+/* ===============================
+              PAGE
+================================== */
+
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+body {
+    background-color: #343F4B;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+  }
+
+/* ===============================
+            ELEMENTS
+================================== */
+
+.img-things-to-do-container-gallery {
+    position: relative;
+    text-align: center;
+}
+
+.img-things-to-do {
+    width: 99.5%;
+    height: 99.5%;
+    font-size: 2em;
+}
+
+.title-things-to-do {
+    position: absolute;
+    top: 40px;
+    margin: 0 auto;
+    width: 100%;
+    color: white;
+    font-size: 40pt;
+    font-weight: bold;
+}
+
+.btn-things-to-do {
+    position: absolute;
+    top:85%;
+    left:50%;
+    margin: -15px 0px 0px -80px;
+    background-color: rgba(20,25,29,0.3);;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    width: 160px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.btn-things-to-do a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ============
+   RESPONSIVE 
+=============== */
+* {
+    box-sizing: border-box;
+}
+
+.img-things-to-do-container-responsive {
+    float: left;
+    width: 33.333333%;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .img-things-to-do-container-responsive {
+        width: 50%;
+    }
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .img-things-to-do-container-responsive {
+        width: 100%;
+    }
+  }
+
+  /* .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+
+

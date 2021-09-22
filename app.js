@@ -60,6 +60,14 @@ app.get("/explore", (req, res) => {
 });
 
 // ======
+// THINGS TO DO ROUTE
+// ======
+
+app.get("/thingstodo", (req, res) => {
+	res.render("4_things_to_do");
+});
+
+// ======
 // SERVER ROUTE
 // ======
 app.listen(process.env.PORT || 3000, () => {
