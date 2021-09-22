@@ -18,7 +18,7 @@ body {
   }
 
 /* ===============================
-            ELEMENTS
+            MAIN ELEMENTS
 ================================== */
 
 .img-things-to-do-container-gallery {
@@ -63,6 +63,7 @@ body {
 /* ============
    RESPONSIVE 
 =============== */
+
 * {
     box-sizing: border-box;
 }
@@ -82,13 +83,13 @@ body {
     .img-things-to-do-container-responsive {
         width: 100%;
     }
-  }
 
-  /* .clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
+    .btn-things-to-do {
+        font-size: 17px;
+    }
+  }
+  
+
 
 
 
