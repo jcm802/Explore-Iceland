@@ -1,0 +1,143 @@
+UserAdmin Routes
+================
+****************
+const express = require('express'),
+    router = express.Router(),
+    catchAsync = require('../utils/catchAsync'),
+    passport = require('passport'),
+    UserAdmin = require('../models/userAdmin');
+
+// =================
+// ADMIN REGISTRATION PAGE
+// =================
+router.get('/registerAdmin', (req, res) => {
+    res.render('auth/userAdmin/registerAdmin');
+});
+
+// ============
+// ADMIN REGISTRATION PROCESS
+// ============
+router.post('/registerAdmin', catchAsync(async (req, res) => {
+    // extra try and catch for message if error and redirection
+    try {
+    const { isAdmin, username, email, password } = req.body;
+    const userAdmin = new UserAdmin({ username, email, isAdmin });
+    const registeredUserAdmin = await UserAdmin.register(userAdmin, password);
+    // res.send(req.body);
+    console.log(registeredUserAdmin);
+    req.flash('success', 'Administrator registered successfully!');
+    res.redirect('/thingstodo');
+    } catch(e){
+        req.flash('error', e.message);
+        res.redirect('/registerAdmin');
+    }
+}));
+
+// ============
+// ADMIN LOGIN PAGE
+// ============
+router.get('/loginAdmin', (req, res) => {
+    res.render('auth/userAdmin/loginAdmin');
+});
+
+// ============
+// ADMIN LOGIN PROCESS (uses passport middleware)
+// ============
+router.post('/loginAdmin', passport.authenticate('local', { failureFlash: true, failureRedirect: '/loginAdmin' }), (req, res) => {
+    // if admin makes it this far they have successfully logged in
+    req.flash('success', 'You are now logged in as an administrator');
+    res.redirect('/thingstodo');
+});
+
+module.exports = router;
+
+UserAdmin Views
+============
+Login Admin View
+************
+
+<%- include("../../partials/main_header") %>
+<div class="bootstrap" style="background-color: #343F4B; color: white; margin-bottom: 10px;">
+    <h1>Admin Login</h1>
+    <div class="container">
+        <form action="/loginAdmin" method="POST" class="validated-form">
+            <div style="margin-bottom: 10px;">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="password" class="form-label">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button class="btn btn-success" style="cursor: pointer">Log In</button>
+        </form>
+    </div>
+</div>
+<%- include("../../partials/main_footer") %>
+
+Register Admin View
+==============
+**************
+<%- include("../../partials/main_header") %>
+<div class="bootstrap" style="background-color: #343F4B; color: white; margin-bottom: 10px;">
+    <h1>Register Admin</h1>
+    <div class="container">
+        <form action="/registerAdmin" method="POST" class="validated-form">
+            <div style="margin-bottom: 10px;">
+                <label for="username" class="form-label">Username: </label>
+                <input type="text" class="form-control" id="username" name="username" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="email" class="form-label">Email: </label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <label for="password" class="form-label">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <button class="btn btn-success" style="cursor: pointer">Register</button>
+        </form>
+    </div>
+</div>
+<%- include("../../partials/main_footer") %>
+
+UserAdmin Model
+===============
+***************
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
+// UserAdmin can create, edit and delete things to do
+const UserAdminSchema = new Schema({
+    isAdmin: {
+        type: Boolean,
+        default: true
+    },
+    email: {
+        type: String,
+        required: true,
+        unique: true
+    }
+});
+// adds (unique required) username and password
+UserAdminSchema.plugin(passportLocalMongoose);
+module.exports = mongoose.model('UserAdmin', UserAdminSchema);
+
+UserAdmin Middleware
+====================
+********************
+module.exports.isAdminLoggedIn = (req, res, next) => {
+    console.log("REQ.USER...", req.user);
+    try {
+    if(!req.user.isAdmin.default === true && !req.isAuthenticated()){
+        req.flash('error', 'You must be an administrator to perform this action');
+        return res.redirect('/loginAdmin');
+    }
+    } catch(e){
+        req.flash('error', 'You must be an administrator to perform this action');
+        return res.redirect('/loginAdmin');
+    }
+    // user is admin
+    console.log("ADMIN SUCCESS!!!!!!!!!!");
+    next();
+}

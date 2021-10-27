@@ -1,0 +1,30 @@
+<%- include("../../partials/main_header") %>
+<div class="bootstrap" style="background-color: #343F4B; color: white; margin: 20px;">
+        <div class="container" style="justify-content: center; margin: 10px; align-items: center; display: flex;"></div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3" style="padding: 40px 0;">
+                <div style="background-color: #343F4B; padding: 10px;">
+                    <div class="card-body">
+                    <h4 class="card-title">Sign Up</h4>
+                        <form action="/register" method="POST" class="validated-form">
+                            <div style="margin-bottom: 10px;">
+                                <label for="username" class="form-label">Username: </label>
+                                <input type="text" class="form-control" id="username" name="username" autofocus required>
+                            </div>
+                            <div style="margin-bottom: 10px;">
+                                <label for="email" class="form-label">Email: </label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div style="margin-bottom: 15px;">
+                                <label for="password" class="form-label">Password: </label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button class="btn btn-success btn-block" style="cursor: pointer; margin-bottom: 10px;">Login</button>
+                            <a href="/register">Already a Member? Log In Here</a>
+                        </form>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+<%- include("../../partials/main_footer") %>

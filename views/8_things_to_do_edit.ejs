@@ -1,0 +1,51 @@
+<%- include("partials/main_header") %>
+    <h1 style="text-align:center;">Edit <%=thingstodos.title%></h1>
+    <div class="bootstrap" style="margin-bottom:10px;background-color: #343F4B;color:white;">
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <form action="/thingstodo/<%=thingstodos._id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div style="margin-bottom: 10px;">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="thingstodo[title]" value="<%=thingstodos.title%>">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea rows="10" type="text" class="form-control" id="description" name="thingstodo[description]">
+                            <%thingstodos.description.split('\n').forEach((ln) => {%><%= ln %><% }) %></textarea>
+                    </div>
+                    <div style="margin-bottom: 10px">
+                        <label for="coverImage">Cover Image URL</label>
+                        <input type="text" class="form-control" id="coverImage" name="thingstodo[image]" value="<%=thingstodos.image%>">
+                    </div>
+                    <div style="margin-bottom: 10px">
+                        <label for="tour">Tour URL</label>
+                        <input type="text" class="form-control" id="tour" name="thingstodo[tour]" value="<%=thingstodos.tour%>">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="image" class="form-label">Add Images To Gallery</label><br>
+                            <input type="file" name="image" id="image" multiple>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" name="thingstodo[location]" value="<%=thingstodos.location%>" required>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <% if(thingstodos.images.length !== 0) {%> 
+                        Current Stored Images:
+                        <% thingstodos.images.forEach((img, i) => {%>
+                            <img src="<%=img.thumbnail%>" style="display: block;" alt="">
+                            <!-- needed updating joi schema, image values are passed to the deleteImages array -->
+                            <input type="checkbox" name="deleteImages[]" id="image-<%=i%>" value="<%=img.filename%>">
+                            <label for="image-<%=i%>">Delete?</label>
+                        <% }) %> 
+                        <% } %> 
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <button class="btn btn-info" style="cursor:pointer;">Update Thing To Do</button>
+                    </div>
+                </form>
+                <a href="/thingstodo/<%=thingstodos._id%>">Back To Thing To Do</a>
+            </div>
+        </div>
+    </div>
+    <%- include("partials/main_footer") %>

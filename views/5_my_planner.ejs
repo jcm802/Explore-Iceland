@@ -1,0 +1,48 @@
+<%- include("partials/main_header") %>
+<div>
+    <h1>My Planner</h1>
+    <div class="bootstrap" style="background-color: #343F4B; color:white;">
+        <!-- Using plans object received by route by app.js -->
+        <!-- Iterate over all plans and display-->
+        <% for(let plan of plans) { %>
+            <div class="card" style="padding: 10px; background-color: #343F4B; color:white;">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" alt="<%=plan.title%>" src="<%=plan.image%>" style="border: 1px solid white;margin-bottom:10px;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= plan.title %></h5>
+                            <p class="card-text"><%= plan.description %></p>
+                            <p class="card-text">
+                                <small class="text-muted"><%= plan.location %> </small>
+                            </p>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <form style="margin-bottom:10px;">
+                                        <label for="date" class="form-label">Date</label>
+                                        <input type="date" class="form-control" id="date" style="margin-bottom: 5px;">
+                                        <label for="time" class="form-label">Time</label>
+                                        <input type="time" class="form-control" id="time" style="margin-bottom: 15px;">
+                                    </form>
+                                    <button class="btn btn-success" style="cursor:pointer; margin-bottom: 20px;">Confirm Date and Time</button>
+                                    <br>
+                                    <button class="btn btn-sm btn-danger" style="cursor:pointer">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- End of iteration -->
+        <%  } %>
+    </div>
+</div>
+<div id="map" class="planner-map"></div>
+<script>
+        const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+        const plans = {features: <%-JSON.stringify(plans)%>}
+</script>
+<script src="/javascript/mapMyPlanner.js"></script>
+
+<%- include("partials/main_footer") %>

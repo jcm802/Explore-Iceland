@@ -1,0 +1,16 @@
+- User clicks on add to plan on the things to do show page
+- Linked to a post request in routes, the user is redirected back to the same page, the action is /myplanner
+- The activity which is already stored in the db somewhere and has an id associated with it, is added to the user's planner along with date and time fields
+- The date and time fields act as put requests, which the user activates (like edit things to do) by clicking on 'confirm date and time'
+- date and time are then added to the db
+- Once date and time are confirmed user is redirected to the same page where date and time are added to the activity
+- The date and time of the activity is added to an array within the db, 
+- The button changes to 'edit date and time' which is a put request
+
+
+
+We can populate things to do with my id, only I can change a thing to do, let's start with that
+
+
+New thing to do is different
+- author is null because there is no previous author

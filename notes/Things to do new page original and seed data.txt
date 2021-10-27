@@ -1,0 +1,111 @@
+Northern lights
+The northern lights\n\are very cool
+/images/2_things_to_do/northern_lights_edited.jpeg
+
+Original things to do new page
+
+    <!-- <form action="/thingstodo" method="POST">
+        <div>
+            <label for="title">Title</label>
+                                    <!-- Grouping content under a name (optional) -->
+            <input type="text" id="title" name="thingtodo[title]">
+        </div>
+        <br />
+        <div>
+            <label for="description">Description</label>
+                                    <!-- Grouping content under a name (optional) -->
+            <textarea id="description" name="thingtodo[description]" rows="20" cols="70"></textarea>
+        </div>
+        <br />
+        <div>
+            <label for="image">Image</label>
+                                    <!-- Grouping content under a name (optional) -->
+            <input type="text" id="image" name="thingtodo[image]">
+        </div>
+        <br />
+        <button>Add Thing To Do</button>
+    </form> -->
+
+
+<h1 style="text-align:center;">Add New Thing To Do</h1>
+    <div class="bootstrap" style="margin-bottom:10px;background-color: #343F4B;color:white;">
+        <div class="row mb-3">
+            <div class="col-md-6 offset-md-3">
+                <form action="/thingstodo" method="POST">
+                    <div style="margin-bottom: 10px;">
+                        <label for="title" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title" name="thingstodo[title]">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea rows="10" type="text" class="form-control" id="description" name="thingstodo[description]"></textarea>
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <label for="image" class="form-label">Image URL</label>
+                        <input type="text" class="form-control" id="image" name="thingstodo[image]">
+                    </div>
+                    <div style="margin-bottom: 10px;">
+                        <button class="btn btn-success" type="submit">Add Thing To Do</button>
+                    </div>
+                </form>
+                <a href="thingstodo">All Things To Do</a>
+            </div>
+        </div>
+    </div>
+
+Original edit form
+
+<h1>Edit <%=thingstodos.title%></h1>
+    <!-- - This is a POST request, but we make it a PUT/PATCH request to get around get and post only permitted through the browser
+    - This is achieved with npm method-override  -->
+
+                <!-- The current thing to do we are editing with method-override -->
+    <form action="/thingstodo/<%=thingstodos._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="title">Title</label>
+                                    <!-- Grouping content under a name (optional) -->
+                                    <!-- You need quotes over value -->
+            <input type="text" id="title" name="thingtodo[title]" value="<%=thingstodos.title%>">
+        </div>
+        <div>
+            <label for="description">Description</label>
+                <!-- Grouping content under a name (optional), we needed to make a forEach here too for line breaks (like in details) -->
+            <textarea id="description" name="thingtodo[description]" rows="20" cols="70">
+                <%thingstodos.description.split('\n').forEach((ln) => {%><%= ln %><% }) %></textarea>
+        </div>
+        <div>
+            <label for="image">Image</label>
+                                    <!-- Grouping content under a name (optional) -->
+            <input type="text" id="image" name="thingtodo[image]" value="<%=thingstodos.image%>">
+        </div>
+        <button>Update Thing To Do</button>
+        <a href="/thingstodo">Go Back</a>
+    </form>
+
+<!-- <div class="card" style="padding-bottom: 10px; background-color: #343F4B; color:white;">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" alt="<%=plan.title%>" src="<%=plan.image%>">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= plan.title %></h5>
+                        <p class="card-text"><%= plan.description %></p>
+                        <p class="card-text">
+                            <small class="text-muted"><%= plan.location %> </small>
+                        </p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <form style="margin-bottom:10px;">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="date" class="form-control" id="date">
+                                    <label for="time" class="form-label">Time</label>
+                                    <input type="time" class="form-control" id="time">
+                                </form>
+                                <button class="btn btn-success">Confirm Date and Time</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->

@@ -1,7 +1,7 @@
 body, html {
   height: 100%;
   margin: 0;
-   
+  overflow-y: hidden;
 }
 
 body {
@@ -35,55 +35,37 @@ body {
 
 .sub-heading {
   position: absolute;
-  top: 90%;
-  left: 30%;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-size: 20px;  
   text-transform: capitalize;
+  width: fit-content;
 }
 
 .btn {
-  border: 2px solid white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 15px;
-  transition: background-color 0.5s ease;
-  -webkit-box-shadow: 6px 3px 13px -3px rgba(0,0,0,0.65);
-  box-shadow: 6px 3px 13px -3px rgba(0,0,0,0.65);
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: rgba(20,25,29,0.3);
+    padding: 10px;
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
 }
 
 .btn:hover{
-  cursor: pointer;
-  background-color:#003087;
-  opacity: 0.8;
+  border: 2px solid #DC1E35;
+  color: #DC1E35;
 }
 
 .index-btn-link {
   text-decoration: none;
   color: white;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-z-index: 1;
-}
-
-.top-left-image {
-  display: block;
-  width: 136px;
-  margin-left: 5px;
-  margin-bottom: 10px;
-
-}
-
-.logo-title {
-  font-family: Domine;
-  font-size: 15px;
-  text-transform: uppercase;
-
 }
 
 .slideshow {
@@ -196,52 +178,19 @@ z-index: 1;
 }
 
 @media only screen and (max-width: 657px) {
-  .centered{
-    font-size: 80px;
-  }
-  .sub-heading {
-    font-size: 14px;
-    margin: 0;
-  }
+.centered {
+  font-size: 80px;
 }
-
-@media only screen and (max-width: 500px) {
-  .centered {
-    font-size: 70px;
-  }
-  .sub-heading {
-    font-size: 12px;
-    margin: 0;
-  }
+.sub-heading {
+  top: 140px;
+}
 }
 
 @media only screen and (max-width: 479px) {
   .centered {
-    font-size: 60px;
+    font-size: 55px;
   }
-
   .sub-heading {
-    font-size: 12px;
-    margin: 0;
-  }
-
-  .top-left {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    z-index: 1;
-  }
-
-  .top-left-image {
-    display: block;
-    width: 100px;
-    margin-left: 5px;
-    margin-bottom: 10px;
-  }
-
-  .logo-title {
-    font-family: Domine;
-    font-size: 12px;
-    text-transform: uppercase;
+    top: 110px;
   }
 }

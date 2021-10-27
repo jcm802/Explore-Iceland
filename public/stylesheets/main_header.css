@@ -1,8 +1,29 @@
+body {
+  background-color: #343F4B;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  text-shadow: 0px 1px 4px rgba(0,0,0,0.5),
+             1px 2px 10px rgba(39,26,12,0.4),
+             2px 4px 10px rgba(0,0,0,0.3);
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  z-index: 999;
+}
+
+.spacer {
+  flex: 1;
+}
+
 .top-left {
   position: absolute;
   top: 8px;
   left: 16px;
-z-index: 1;
 }
 
 .top-left-image {
@@ -10,7 +31,6 @@ z-index: 1;
   width: 110px;
   margin-left: 5px;
   margin-bottom: 10px;
-
 }
 
 .logo-title {
@@ -19,7 +39,7 @@ z-index: 1;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
-
+  margin-bottom: 30px;
 }
 
 .header {
@@ -39,6 +59,7 @@ z-index: 1;
 .nav-options {
 	font-family: 'Lato', sans-serif;
   height: 30px;
+  margin-top: 10px;
 }
 
 .nav-options a {
@@ -48,23 +69,39 @@ z-index: 1;
 }
 
 .nav-options a:hover {
-  color: red;
+  color: #DC1E35;
 }
+
+.login-link {
+  transition: color 0.5s ease-in-out;
+}
+
+.signup-link {
+  transition: color 0.5s ease-in-out;
+}
+
+.login-link:hover {
+  color: #DC1E35;
+}
+
+.signup-link:hover {
+  color: #DC1E35;
+}
+
+
 .nav-options span {
 	margin-left: 15px;
 	margin-right: 45px;
 }
 
-.tel-number {
-  font-size: 20px;
-}
-
 .extra-nav-container {
-  width: 100%;
+  width: 500px;
   height: 90px;
-  margin-left: 200px;
   display: inline-block;
   font-family: 'Lato', sans-serif;
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
 
 .extra-nav-container a {
@@ -74,10 +111,10 @@ z-index: 1;
 }
 
 
-.title-icons-container {
+.partners-container {
   position: absolute;
   top: 0.5em;
-  left: 50px;
+  right: 600px;
   width: 650px;
   display: inline-block;
 }
@@ -138,6 +175,9 @@ input:focus {
   width: 200px;
   height: 90px;
   float: right;
+ position: absolute;
+ top: 20px;
+ right: 50px;
 }
 
 .about-contact-container {
@@ -147,7 +187,7 @@ input:focus {
   box-sizing: border-box;
   position: absolute;
   right: 10px;
-  top: 50px;
+  top: 20px;
 }
 .about-contact-container span  {
   margin: 12px;
@@ -155,16 +195,30 @@ input:focus {
 
 .login-signup-container {
   position: absolute;
-  right: 35px;
-  top: 80px;
-  width: 200px;
-  height: 45px;
+  right: 20px;
+  top: 50px;
+  width: 230px;
+  height: 60px;
   font-size: 18px;
   display: inline-block;
   box-sizing: border-box;
 }
-.login-signup-container span  {
+.login-signup-container a  {
   margin: 7px;
+}
+
+.login-signup-container a i {
+  margin-left: 7px;
+  margin-bottom: 10px;
+}
+
+.logout-link {
+  padding-left: 95px;
+  transition: color 0.5s ease-in-out;
+}
+
+.logout-link:hover {
+  color: #DC1E35;
 }
 
 .contact-authentication-container-1271px {
@@ -237,6 +291,7 @@ input:focus {
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #383838;
+  transition: color 0.5s ease-in-out;
 }
 
 .main-menu li:first-child a {
@@ -246,7 +301,7 @@ input:focus {
 .main-menu a:hover,
 .main-menu a:focus {
   background: #333;
-  text-decoration: underline;
+  color: #DC1E35;
 }
 
 .main-menu .menu-close {
@@ -317,32 +372,22 @@ input:focus {
 ===== Cross Compatibility =====
 ===============================
 */
-@media only screen and (max-width: 1271px) {
-  .tel-number {
-    visibility: hidden;
-  }
-}
 
-@media only screen and (max-width: 1132px) {
 
-  .partners-title {
-    position: absolute;
-    bottom: 35px;
-  }
+@media only screen and (max-width: 1300px) {
 
   .icons {
     position: absolute;
     bottom: 20px;
   }
 
- .title-icons-container {
-    position: absolute;
-    top: 0.5em;
-    left: 50px;
-    width: 600px;
-    display: inline-block;
-    height: 80px;
-    padding: 5px;
+  .menu-toggle, .main-menu .menu-close {
+    visibility: visible;
+  }
+
+ .partners-container {
+    top: 1.5em;
+    right: 350px;
 }
 
   .fa-envelope {
@@ -353,16 +398,9 @@ input:focus {
     /*background: yellow;*/
     visibility: hidden;
   }
-}
-
-@media only screen and (max-width: 1027px) {
 
   .header-nav {
     display: none;
-  }
-
-  .menu-toggle, .main-menu .menu-close {
-    visibility: visible;
   }
 
   .top-left {
@@ -375,58 +413,50 @@ input:focus {
   }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
   .search-bar-container {
     right: 300px;
     width: 100%;
     left: 300px;
     top: 95px;
-
   }
+
+  .partners-container {
+    top: 0;
+    right: 100px;
+}
 }
 
 @media only screen and (max-width: 850px) {
-
-  .title-icons-container {
-    /*background: black;*/
-    height: 100px;
+  .partners-container {
+    right: 0px
   }
 }
 
 @media only screen and (max-width: 680px) {
 
-  .title-icons-container {
+  .partners-container {
     visibility: hidden;
   }
 
   .top-left {
-    position: static;
     text-align: center;
     margin-left: 2px;
     padding-top: 20px;
+    position: absolute;
+    left: 50%;
+    top: 70px;
+    transform: translate(-50%, -50%);
+
   }
 
  .top-left-image {
     width: 120px;
     margin: 0 auto;
     margin-bottom: 6px;
-    text-shadow: 0px 2px 3px rgba(0,0,0,0.4),
-             0px 8px 13px rgba(0,0,0,0.1),
-             0px 18px 23px rgba(0,0,0,0.1); 
   }
 
-  .logo-title {
-    font-family: Domine;
-    font-size: 13px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    }
-}
-
-@media only screen and (max-width: 680px) {
-
-.search-bar-container label img {
-  visibility: hidden;
-}
+  .search-bar-container label img {
+    visibility: hidden;
+  }
 }

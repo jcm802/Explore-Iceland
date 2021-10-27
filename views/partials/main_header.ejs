@@ -1,107 +1,131 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Explore Iceland</title>
-		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-		<link rel="stylesheet" href="stylesheets/main_header.css">
-		<link rel="stylesheet" href="stylesheets/home.css">
-		<link rel="stylesheet" href="stylesheets/explore.css">
-		<link rel="stylesheet" href="stylesheets/things_to_do.css">
+		<link rel="stylesheet" href="/stylesheets/all.css">
+		<link rel="stylesheet" href="/stylesheets/main_header.css">
+		<link rel="stylesheet" href="/stylesheets/home.css">
+		<link rel="stylesheet" href="/stylesheets/explore.css">
+		<link rel="stylesheet" href="/stylesheets/things_to_do.css">
+		<link rel="stylesheet" href="/stylesheets/things_to_do_details.css">
+		<link rel="stylesheet" href="/stylesheets/things_to_do_new.css">
+		<link rel="stylesheet" href="/stylesheets/my_planner.css">
+		<link rel="stylesheet" href="/stylesheets/footer.css">
+		<link rel="stylesheet" href="/stylesheets/stars.css">
+		<link rel="stylesheet" href="/stylesheets/map.css">
 		<link rel="shortcut icon" href="/images/header/iceland_flag_index_favicon.ico">
+		<link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.0.0-beta/iso_bootstrap4.0.0min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="stylesheets/footer.css"/>
-		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="crossorigin="anonymous"></script>
+		<!-- MapBox -->
+		<script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
+		<link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
+
 	</head>
-	
 	<body>
-	<div class="header">
-		<div class="top-left">
-			<a href="/home"><img class="top-left-image" src="/images/header/iceland_flag_index.png" alt="Explore Iceland Logo"></a>
-			<span class="logo-title">Explore Iceland</span>
-		</div>
-		<!-- Menu For Tablets and Mobiles -->
-		<a href="#main-menu" 
-		id="main-menu-toggle"
-		class="menu-toggle"
-		aria-label="Open main menu">
-			<span class="sr-only">Open main menu</span>
-    		<span class="fa fa-bars"></span>
-  		</a>
-  		<nav id="main-menu" class="main-menu" aria-label="Main menu">
-    		<a href="#main-menu-toggle" 
-    		id="main-menu-close"
-    		class="menu-close"
-    		aria-label="Close main menu">
-    		<span class="sr-only">Close main menu</span>
-      		<span class="fas fa-arrow-circle-left" aria-hidden="true"></span>
-    		</a>
-    		<ul>
-    			<li><a href="#">Sign In</a></li>
-      			<li><a href="#">Login</a></li>
-      			<a href="/home"><li>Home</li></a>
-      			<a href="/explore"><li>Explore</li></a>
-      			<li><a href="/thingstodo">Things To Do</a></li>
-      			<li><a href="#">Places To Stay</a></li>
-      			<li><a href="#">Facts</a></li>
-      			<li><a href="#">Book</a></li>
-      			<li><a href="#">Planner</a></li>
-      			<li><a href="#">About</a></li>
-      			<li><a href="#">Contact</a></li>
-    		</ul>
-  		</nav>
-  		<a href="#main-menu-toggle" 
-  		class="backdrop" 
-  		tabindex="-1"
-  		hidden></a>
-  		<!------------------------->
-		<div class="extra-nav-container">
-			<div class="title-icons-container">
-			<a href="#"><span class="partners-title">Our Partners</span></a>
-				<div class="icons">
-					<a href="#"><img src="/images/header/Company1.png" alt="Company1"></a>
-					<a href="#"><img src="/images/header/Company2.png" alt="Company2"></a>
-					<a href="#"><img src="/images/header/Company3.png" alt="Company3"></a>
+	<div class="spacer">
+		<div class="header">
+			<a href="/home">
+			<div class="top-left">
+				<img class="top-left-image" src="/images/header/iceland_flag_index.png" alt="Explore Iceland Logo">
+				<span class="logo-title">Explore Iceland</span>
+			</div>
+			</a>
+			<!-- Menu For Tablets and Mobiles -->
+			<a href="#main-menu" 
+			id="main-menu-toggle"
+			class="menu-toggle"
+			aria-label="Open main menu">
+				<span class="sr-only">Open main menu</span>
+				<span class="fa fa-bars"></span>
+			</a>
+			<nav id="main-menu" class="main-menu" aria-label="Main menu">
+				<a href="#main-menu-toggle" 
+				id="main-menu-close"
+				class="menu-close"
+				aria-label="Close main menu">
+				<span class="sr-only">Close main menu</span>
+				<span class="fas fa-arrow-circle-left" aria-hidden="true"></span>
+				</a>
+				<ul>
+					<li><a href="/register">Sign Up</a></li>
+					<li><a href="/login">Log In</a></li>
+					<a href="/home"><li>Home</li></a>
+					<a href="/explore"><li>Explore</li></a>
+					<li><a href="/thingstodo">Things To Do</a></li>
+					<li><a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=falsehttps://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank">Places To Stay</a></li>
+					<li><a href="#">Facts</a></li>
+					<li><a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank">
+							Book</a></li>
+					<li><a href="#">My Planner</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Contact</a></li>
+					<!-- Show or hide depending on if user is logged in -->
+					<% if(loggedInUser) {%> 
+					<li><a href="/logout">Log Out</a></li>
+					<% } %> 
+				</ul>
+			</nav>
+			<a href="#main-menu-toggle" 
+			class="backdrop" 
+			tabindex="-1"
+			hidden></a>
+			<!------------------------->
+			<div class="extra-nav-container">
+				<div class="partners-container">
+				<a href="#"><span class="partners-title">Our Partners</span></a>
+					<div class="icons">
+						<a href="#"><img src="/images/header/Company1.png" alt="Company1"></a>
+						<a href="#"><img src="/images/header/Company2.png" alt="Company2"></a>
+						<a href="#"><img src="/images/header/Company3.png" alt="Company3"></a>
+					</div>
+					<!--Search Bar-->
+					<div class="search-bar-container">
+						<label for="site-search"><img src="/images/header/Search_Sml.png"></label>
+						<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search Explore Iceland">
+					</div>
 				</div>
-				<!--Search Bar-->
-				<div class="search-bar-container">
-					<label for="site-search"><img src="/images/header/Search_Sml.png"></label>
-					<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search Explore Iceland">
+
+				<div class="contact-authentication-container">
+					<div class="about-contact-container">
+						<span>ABOUT</span><i class="far fa-question-circle"></i>
+						<span>CONTACT<span><i class="far fa-envelope"></i>
+					</div>
+					<div class="login-signup-container">
+						<!-- Show and hide depending on if a user is logged in -->
+						<% if(!loggedInUser) {%> 
+						<a href="/login" class="login-link"><span>LOGIN</span><i class="fas fa-sign-in-alt"></i></a>
+						<a href="/register" class="signup-link"><span>SIGN UP</span><i class="fas fa-user-plus"></i></a>
+						<% } else {%>
+							<a href="/logout" class="logout-link"><span>LOG OUT</span><i class="fas fa-sign-out-alt"></i></a>
+						<% } %> 
+						</div>
+						
 				</div>
 			</div>
 
-			<div class="contact-authentication-container">
-				<div class="about-contact-container">
-					<span>ABOUT</span><i class="far fa-question-circle"></i>
-					<span>CONTACT<span><i class="far fa-envelope"></i>
+			<!---------
+				MAIN NAV FOR LARGER SCREENS
+			-->
+			<div class="header-nav">
+				<div class="nav-options">
+					<a href="/home" class="home-nav-option"><span>home</span></a>
+					<a href="/explore" class="explore-nav-option"><span>explore</span></a>
+					<a href="/thingstodo" class="thingstodo-nav-option"><span>things to do</span></a>
+					<a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank"><span>places to stay</span></a>
+					<span>facts</span>
+					<a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank">
+						<span>book</span></a>
+					<!-- <a href="/myplanner" class="myplanner-nav-option"> -->
+					<span>My Planner</span>
+					<!-- </a> -->
 				</div>
-				<div class="login-signup-container">
-					<span>LOGIN</span><i class="fas fa-sign-in-alt"></i>
-					<span>SIGN UP</span><i class="fas fa-user-plus"></i>
-				</div>
-		    </div>
-
-			<div class="login-signup-container"></div>
-		</div>
-
-		<!---------
-			MAIN NAV FOR LARGER SCREENS
-		-->
-		<div class="header-nav">
-			<div class="nav-options">
-				<a href="/home" class="home-nav-option"><span>home</span></a>
-				<a href="/explore" class="explore-nav-option"><span>explore</span></a>
-				<a href="/thingstodo" class="thingstodo-nav-option"><span>things to do</span></a>
-				<span>places to stay</span>
-				<span>facts</span>
-				<span>book</span>
-				<span>planner</span>
-				<span class="tel-number">+02795 468 152732</span>
 			</div>
 		</div>
 
-	</div>
+	<%- include("./flash") %>

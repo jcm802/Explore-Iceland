@@ -3,7 +3,7 @@ const 	mongoose 	= require("mongoose"),
 		IndexImage  = require("./models/indexImages");
 
 // SEED DATA
-let images = [
+const images = [
 
   	{
   	name: "image1",

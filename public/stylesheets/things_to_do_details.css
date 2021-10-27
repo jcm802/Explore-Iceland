@@ -1,0 +1,281 @@
+.things-to-do-details-image-container {
+  width: 100%;
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3px;
+}
+
+.things-to-do-details-image {
+  height: 500px;
+  width: 100%;
+  filter: grayscale(100%) brightness(45%);
+  object-fit: cover;
+}
+
+.things-to-do-details-title {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.things-to-do-details-description {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 60%;
+  overflow: -moz-scrollbars-vertical; 
+  overflow-y: scroll;
+  padding: 10px;
+  line-height: 1.5em;
+}
+
+.admin-tasks-row {
+  padding: 15px;
+  height: 50px;
+  text-align: center;
+}
+
+.admin-tasks-column {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.details-nav-row {
+  margin: 10px;
+  position: absolute;
+  top: 400px;
+  left: 10px;
+  width: 100%;
+  
+}
+
+.details-nav-column {
+  float: left;
+  width: 23%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+.details-nav-column a {
+  color: white;
+  text-decoration: none;
+}
+
+.details-nav-column i {
+  font-size: 35px;
+}
+
+.details-nav-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 50%;
+  position: relative;
+  float: left;
+  border-right: 2px solid #343F4B;
+}
+
+.slideshow-headline{
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+.slideshow-image {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.tours-container {
+  position: relative;
+  width: 50%;
+  overflow: hidden;
+  border-left: 2px solid #343F4B;
+}
+
+.tours-headline {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.tours-image {
+  width: 100%;
+  -webkit-transition: all 1s ease;
+  transition: all 0.8s ease
+}
+
+.tours-image:hover {
+  filter: saturate(3);
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.things-to-do-details-map {
+  position: relative;
+}
+
+.map-title {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30pt;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* ============= */
+/*  RESPONSIVE   */
+/* ============= */
+@media only screen and (max-width: 900px) {
+  .slideshow-container {
+    max-width: 100%;
+    float: none;
+    padding-left: 3px;
+  }
+  .tours-container {
+    width: 100%;
+    max-height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('images/tours.jpeg');
+  }
+}
+/* 
+@media only screen and (max-width: 700px) {
+  .things-to-do-details-image {
+    width: 240%; 
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .things-to-do-details-image {
+    width: 310%; 
+  }
+} */
+
+/* Arrow telling user they can scroll down if overflow - Work in progress */
+/* .scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 130px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+width: 13px;
+height: 13px;
+border-bottom: 5px solid red;
+border-right: 5px solid red;
+left: 50%;
+-webkit-transform: translate(-50%, 0%) rotate(45deg);
+-moz-transform: translate(-50%, 0%) rotate(45deg);
+transform: translate(-50%, 0%) rotate(45deg);
+-webkit-animation: fade_move_down 4s ease-in-out infinite;
+-moz-animation:    fade_move_down 4s ease-in-out infinite;
+animation:         fade_move_down 4s ease-in-out infinite;
+}
+*/
+
+/*animated scroll arrow animation*/
+/*
+@-webkit-keyframes fade_move_down {
+0%   { -webkit-transform: translate(0,-10px) rotate(45deg); opacity: 0;  }
+50%  { opacity: 1;  }
+100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+0%   { -moz-transform: translate(0,-10px) rotate(45deg); opacity: 0;  }
+50%  { opacity: 1;  }
+100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+0%   { transform: translate(0,-10px) rotate(45deg); opacity: 0;  }
+50%  { opacity: 1;  }
+100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+} */

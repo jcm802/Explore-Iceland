@@ -1,0 +1,13 @@
+<%- include("partials/main_header") %>
+<div class="bootstrap" style="background-color: #343F4B;">
+    <div class="row" style="margin-top: 10px;">
+        <div class="alert alert-danger" role="alert" style="text-shadow: 0px 0px 0px #333;">
+            <h4 class="alert-heading"><%=err.message%></h4>
+            <!-- error stack not shown in production -->
+            <% if(process.env.NODE_ENV !== "production"){ %> 
+            <p><%=err.stack%></p>
+            <% } %> 
+            </div>
+    </div>
+</div>
+<%- include("partials/main_footer") %>

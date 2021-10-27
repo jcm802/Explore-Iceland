@@ -1,62 +1,24 @@
 <%- include("partials/main_header") %>
+
+<!-- Loop from here -->
+<% for(let thingstodo of thingstodos) { %>
 <div class="img-things-to-do-container-responsive">
     <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/gulfoss_handoff_edited.jpeg">
-            <div class="title-things-to-do">Gulfoss Falls</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
+                            <!-- get id from db -->
+        <a href="/thingstodo/<%= thingstodo._id%>"> 
+                                            <!-- get image from db -->
+            <img class="img-things-to-do" src="<%=thingstodo.image%>">
+                                        <!-- get title from db -->
+            <div class="title-things-to-do"><%=thingstodo.title%></div>
+        </a>                                                       
+                                                            <!-- get id from db -->
+        <a href="/thingstodo/<%= thingstodo._id%>"><button class="btn-things-to-do">Find Out More</button></a>
     </div>
 </div>
-
-<div class="img-things-to-do-container-responsive">
-    <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/blue_lagoon3_edited.jpeg">
-            <div class="title-things-to-do">The Blue Lagoon</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
-    </div>
-</div>
-
-<div class="img-things-to-do-container-responsive">
-    <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/northern_lights_edited.jpeg">
-            <div class="title-things-to-do">Northern Lights</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
-    </div>
-</div>
-
-<div class="img-things-to-do-container-responsive">
-    <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/whale_watching2.jpeg">
-            <div class="title-things-to-do">Whale Watching</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
-    </div>
-</div>
-
-<div class="img-things-to-do-container-responsive">
-    <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/skogafoss2_edited.jpeg">
-            <div class="title-things-to-do">Skógafoss</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
-    </div>
-</div>
-
-<div class="img-things-to-do-container-responsive">
-    <div class="img-things-to-do-container-gallery">
-        <a href="#">
-            <img class="img-things-to-do" src="/images/2_things_to_do/jokulsarlon_edited.jpeg">
-            <div class="title-things-to-do">Jökulsárlón</div>
-        </a>
-            <button class="btn-things-to-do"><a href="#">Find Out More</a></button>
-    </div>
-</div>
-
+<% } %>
+<!-- Loop end -->
+<div id="map" class="things-to-do-map"></div>
+<script>const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+    const thingstodo = {features: <%-JSON.stringify(thingstodos)%>}</script>
+<script src="javascript/mapThingsToDo.js"></script>
 <%- include("partials/main_footer") %>
