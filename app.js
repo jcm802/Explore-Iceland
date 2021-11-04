@@ -261,7 +261,8 @@ app.use((err, req, res) => {
 // ======
 // SERVER ROUTE
 // ======
-app.listen(process.env.PORT || 3000, () => {
-	console.log("Server on port 3000 started...");
+const port = process.env.PORT;
+app.listen(port || 3000, () => {
+	console.log(`Server on port ${port} started...`);
 });
 
