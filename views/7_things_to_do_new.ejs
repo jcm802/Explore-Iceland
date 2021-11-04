@@ -1,13 +1,10 @@
 <%- include("partials/main_header") %>
+<!-- Admin Only -->
 <h1 style="text-align:center;">Add New Thing To Do</h1>
-<!-- Bootstrap form with using isolated bootstrap -->
 <div class="bootstrap" style="margin-bottom:10px;background-color: #343F4B;color:white;">
     <div class="container">
         <div class="row mb-3">
             <div class="col-md-6 offset-md-3">
-                <!-- custom validation not working because of isolated bootstrap
-                todo: integrate bootstrap with LESS -->
-                <!-- Includes an encoding type allowing uploading of images, requires multer -->
                 <form action="/thingstodo" method="POST" class="validated-form" enctype="multipart/form-data">
                     <div style="margin-bottom: 10px;">
                         <label for="title" class="form-label">Title</label>
@@ -42,5 +39,4 @@
         </div>
     </div>
 </div>
-    <!-- Bug - script does not work correctly fix later -->
 <%- include("partials/main_footer") %>

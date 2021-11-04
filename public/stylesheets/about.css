@@ -1,0 +1,11 @@
+.about-icon-container {
+    width: 100%; 
+    height: fit-content;
+    text-align: center;
+    
+}
+
+.fa-github, .fa-linkedin {
+    font-size: 50px;
+    padding: 10px;
+}

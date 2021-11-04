@@ -1,13 +1,8 @@
-// This statement takes variables from the .env file and makes them available to the rest of the app
+// Takes variables from the .env file and makes them available to the rest of the app
 // Use process.env.<variable> to retrieve them
 if(process.env.NODE_ENV !== 'production') {
 	require('dotenv').config();
 }
-// ======
-// CONFIG
-// seeded activities
-const { Router } = require('express');
-const activities = require('./mainSeeds/activities');
 
 // ======
 // DEPENDENCIES
@@ -16,13 +11,8 @@ const express 			= require('express'),
 	  mongoose 			= require('mongoose'),
 	  // Optional layout syntax for partials
 	  ejsMate           = require('ejs-mate'),
-	  // Advanced data validation (joi is required in schema)
-	  { thingstodoSchema,
-		 reviewSchema } = require('./joiSchemas'),
 	  // Overriding browser constraints on request types
 	  methodOverride	= require('method-override'),
-	  // Modular error handling
-	  catchAsync 		= require('./utils/catchAsync'),
 	  ExpressError      = require('./utils/ExpressError'),
 	  // Authentication
 	  session			= require('express-session'),
@@ -34,13 +24,12 @@ const express 			= require('express'),
 	  path				= require('path'),
 	  // Models
 	  IndexImage    	= require('./models/indexImages'),
-	  Plan          	= require('./models/plan'),
 	  User              = require('./models/user'),
-	  seedDB			= require('./seeds'),
 	  // Routes
 	  thingstodoroutes  = require('./routes/thingstodo'),
 	  reviewRoutes      = require('./routes/reviews'),
 	  userRoutes		= require('./routes/users'),
+	  plannerRoutes     = require('./routes/planner'),
 	  // Prevents mongo injection
 	  mongoSanitize = require('express-mongo-sanitize'),
 
@@ -113,6 +102,7 @@ const scriptSrcUrls = [
     "https://maxcdn.bootstrapcdn.com/",
 	"https://stackpath.bootstrapcdn.com",
 	"https://maps.googleapis.com/",
+	"https://ajax.googleapis.com/"
 ];
 const styleSrcUrls = [
     "https://maxcdn.bootstrapcdn.com/",
@@ -169,7 +159,6 @@ app.use((req, res, next) => {
 	// Setting to locals giving access to these params from all templates
 	// Giving access to current user for all templates
 	res.locals.loggedInUser = req.user;
-
 	// For flash Middleware
 	res.locals.success = req.flash('success');
 	res.locals.error = req.flash('error');
@@ -180,6 +169,7 @@ app.use((req, res, next) => {
 app.use('/thingstodo', thingstodoroutes);
 app.use('/thingstodo/:id/reviews', reviewRoutes);
 app.use('/', userRoutes);
+app.use('/myplanner', plannerRoutes);
 
 // ======
 // INDEX
@@ -212,43 +202,19 @@ app.get("/explore", (req, res) => {
 	res.render("3_explore");
 });
 
-// ==========
-// ==========
-// PLANNER - IN PROGRESS ------------------------------------------------
-// ==========
-// Todo:
-// - Move routes to own file and condense in a controller
-// - Link saved attractions with user
-// - Add delete functionality
-// ==========
+// -------------
+//  FACTS ROUTE
+// -------------
+app.get('/facts', (req, res) => {
+	res.render('10_facts');
+});
 
-// TESTING - ADDING A PLAN TO PLAN COLLECTION
-// =======
-app.get("/makeplan", catchAsync(async (req, res) => {
-	// creating a new plan object
-	const plan = new Plan({date: '16/10/1990', time: '2:30pm'})
-	// save it so it is permanent
-	await plan.save()
-	// send the object in the response to the template
-	res.send(plan);
-}));
-
-// MY PLANNER ROUTE *GET*
-// =====
-// Showing our DB content
-app.get("/myplanner", catchAsync(async (req, res) => {
-	// retrieve from db
-	const plans = await Plan.find({})
-	// pass to template
-	res.render('5_my_planner', { plans });
-}));
-
-// ============
-// MY PLANNER DELETE ROUTE *DELETE* - IN PROGRESS
-// ============
-
-// END OF PLANNER ROUTES
-// ------------------------------------------------------
+// -------------
+// ABOUT ROUTE
+// -------------
+app.get("/about", (req, res) => {
+	res.render("9_about");
+})
 
 // =============
 // FOR ALL PATHS
@@ -262,14 +228,14 @@ app.all('*', (req, res, next) => {
 // =============
 // ERROR HANDLER
 // =============
-app.use((err, req, res, next) => {
+app.use((err, req, res) => {
 	// destructuring error params
 	const { statusCode = 500 } = err;
 	if(!err.message) err.message = 'Something went wrong!';
 	// passing status, rendering template, passing error to template
 	res.status(statusCode).render('errorPage', { err });
 	// === TEST ===
-	// res.send('Something went wrong!')
+	// res.send('Something went wrong!');
 });
 
 // ======

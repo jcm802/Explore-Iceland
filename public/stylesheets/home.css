@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-
+/* Section 1 */
 .image-container-1 {
   position: relative;
   text-align: center;
@@ -48,15 +48,29 @@
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(168deg) brightness(102%) contrast(103%);
 }
 
-/* Slight adjustment needed because the plan image is at an angle */
+/* Slight adjustment needed because the plan image is naturally rotated */
 #plan-image {
   margin-left: 12%;
+}
+
+/*  Section 2 */
+.heading-description-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.heading-description-link:hover {
+  color: #DC1E35;
 }
 
 .text-container-2 {
   text-align: center;
   padding: 0 100px 15px 100px;
+  line-height: 20px;
 }
+
+/* Section 3 */
 
 .image-container-3 {
   position: relative;
@@ -156,7 +170,7 @@
 
 
 /* =========
-  Testimonials 
+  Section 4 - Testimonials 
   ============ */
 
 .testimonials-header {
@@ -179,11 +193,11 @@
 }
 
 .person-image {
-  width: 70%;
+  width: 60%;
 }
 
 .testimonial-para {
-  width: 75%;
+  width: 65%;
   height: fit-content;
   margin: 0 auto;
   font-size: 1.2em;
@@ -212,6 +226,9 @@
   ================== */
 
 @media only screen and (max-width: 1132px) {
+  .top-images-and-text-row {
+    top: 35%;
+  }
 
   .image2-content h1 {
     visibility: hidden;
@@ -315,7 +332,7 @@
   }
 
   .person-image {
-    width: 50%;
+    width: 45%;
   }
 
   .testimonial-para {

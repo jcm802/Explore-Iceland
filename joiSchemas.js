@@ -1,7 +1,7 @@
 const BaseJoi = require('joi'),
     sanitizeHtml = require('sanitize-html');
 
-// Method for sanitizing html. Helps prevent cross site scripting
+// Method for sanitizing html. Helps prevent cross site scripting.
 const extension = (joi) => ({
     type: 'string',
     base: joi.string(),
@@ -37,7 +37,6 @@ module.exports.thingstodoSchema = Joi.object({
     deleteImages: Joi.array()
 });
 
-// REVIEW SCHEMA
 module.exports.reviewSchema = Joi.object({
 review: Joi.object({
     title: Joi.string().required().escapeHTML(),

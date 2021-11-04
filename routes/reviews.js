@@ -2,10 +2,7 @@ const express = require('express'),
     // router keeps params separated so we have to merge params so we can get the review id
     router = express.Router({ mergeParams: true }),
     catchAsync = require('../utils/catchAsync'),
-    ExpressError = require('../utils/ExpressError'),
-    Thingstodo  = require('../models/thingstodo'),
-    Review = require('../models/review'),
-	reviewsController = require('../controllers/reviews'),
+    reviewsController = require('../controllers/reviews'),
 	{ validateReview, isLoggedIn, isReviewAuthor } = require('../middleware');
 
 // ===========

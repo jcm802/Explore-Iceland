@@ -1,3 +1,4 @@
+/* Landing page automatic slideshow */
 body, html {
   height: 100%;
   margin: 0;
@@ -59,8 +60,7 @@ body {
 }
 
 .btn:hover{
-  border: 2px solid #DC1E35;
-  color: #DC1E35;
+  background-color: #02529C;
 }
 
 .index-btn-link {

@@ -1,10 +1,9 @@
-
 mapboxgl.accessToken = mapToken;
 const map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/dark-v10',
 center: [-19.0208, 64.9631],
-zoom: 5
+zoom: 5.5
 });
 
  
@@ -18,7 +17,7 @@ type: 'geojson',
 // from 12/22/15 to 1/21/16 as logged by USGS' Earthquake hazards program.
 data: plans,
 cluster: true,
-clusterMaxZoom: 14, // Max zoom to cluster points on
+clusterMaxZoom: 5, // Max zoom to cluster points on
 clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
 });
  

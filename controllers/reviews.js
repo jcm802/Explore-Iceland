@@ -5,14 +5,16 @@ const Thingstodo = require('../models/thingstodo');
 // REVIEW PATH - *CREATE*
 // =============
 module.exports.createReview = async(req, res) => {
-	// Associated things to do with review
+	// Find relevant thingtodo
 	const thingstodo = await Thingstodo.findById(req.params.id);
+
+	// Create new review
 	const review = new Review(req.body.review);
 	
 	// Associate author with reviews
 	review.author = req.user._id;
 	
-	// Push to array and save
+	// Push review to thingtodo array and save both
 	thingstodo.reviews.push(review);
 	await review.save();
 	await thingstodo.save();
@@ -20,8 +22,6 @@ module.exports.createReview = async(req, res) => {
 	// Flash
 	req.flash('success', 'Created new review!');
 	res.redirect(`/thingstodo/${thingstodo._id}`);
-	// ======== TEST ===========
-	// res.send('REVIEW POSTED')
 };
 
 // ===========

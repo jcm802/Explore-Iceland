@@ -3,6 +3,7 @@
     height: 150px;
     background-color: #5A6978;
     display: inline-block;
+    z-index: 999;
   }
   
   /* Footer column orientation */

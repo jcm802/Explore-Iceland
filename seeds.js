@@ -2,9 +2,8 @@
 const 	mongoose 	= require("mongoose"),
 		IndexImage  = require("./models/indexImages");
 
-// SEED DATA
+// INDEX PAGE IMAGES SEED DATA USED FOR INITIAL TESTING
 const images = [
-
   	{
   	name: "image1",
    image: "https://images.unsplash.com/photo-1529963183134-61a90db47eaf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"

@@ -2,14 +2,14 @@
 <div class="things-to-do-details-image-container">
     <img class="things-to-do-details-image" src="<%=thingstodos.image%>" alt="<%thingstodos.title%> ">
     <h1 class="things-to-do-details-title"><%=thingstodos.title%></h1>
-    <!-- <div class="scroll-down"></div> -->
+    <!-- <div class="scroll-down"></div> - Optional -->
     <p class="things-to-do-details-description">
         <%thingstodos.description.split('\n').forEach((ln) => {%>
             <%= ln %><br/>
         <% }) %> 
     </p>
-    <!-- <script src="/javascript/textOverflowCheck.js"></script> -->
-    <!-- Nav icons and text - options for user -->
+    <!-- <script src="/javascript/textOverflowCheck.js"></script> - Optional -->
+    <!-- Top section nav icons -->
 <div class="details-nav-row">
     <a class="map-link" href="javascript:;" onclick="scrollToMap()">
         <div class="details-nav-column">
@@ -29,15 +29,16 @@
             <p class="details-nav-tours-text">Tours</p>
         </div>
     </a>
-    <a href="#">
-        <div class="details-nav-column">
-            <i class="fas fa-plus-circle" style="color:lightgreen"></i>
-            <p class="details-add-text">Add To Plan</p>
-        </div>
-    </a>
+        <!-- Add to plan button -->
+        <form action="/myplanner/<%=thingstodos.id%>" method="POST">
+            <button class="details-nav-column"> 
+                <i class="fas fa-plus-circle" style="color:lightgreen"></i>
+                <p class="details-add-text">Add To Plan</p>
+            </button>
+        </form>
 </div>
 </div>
-<!-- Authorisation - If I am logged in, show admin tasks -->
+<!-- Hidden admin tasks, allows client side creating, editing and deleting things to do -->
 <% if(loggedInUser && thingstodos.author.equals(loggedInUser)) { %> 
 <div class="bootstrap" style="background-color: #343F4B; color: white; margin-bottom: 20px;">
     <div class="admin-tasks-row">
@@ -62,9 +63,8 @@
         </div>
     </div>
     <% } %>
-<script src="/javascript/scrollToFunctionsNav.js"></script>
-<!-- Carousel -->
 
+<!-- GALLERY -->
 <div class="slideshow-container">
     <div class="slideshow-headline">Gallery</div>
     <!-- Full-width images with number and caption text -->
@@ -77,19 +77,18 @@
         <% } %> 
         <!-- Display controls only if there are more than 1 image -->
         <% if(thingstodos.images.length > 1) {%> 
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <% } %> 
 </div>
 
-<script src="/javascript/Carousel.js"></script>
 <!-------------  TOURS ----------------->
 <div class="tours-container">
     <a href="<%=thingstodos.tour%>" target="_blank"><div class="tours-headline" style="color:white;">Tours</div>
     <img class="tours-image" src="/images/tours_adobespark.jpeg" alt="click for tours"></a>
 </div>
-<!-------------------------------------->
+
 <!--------------- MAP ------------------>
 <div id="map" class="things-to-do-details-map">
     <div class="map-title">Location</div>
@@ -99,23 +98,25 @@
     const thingstodo = <%-JSON.stringify(thingstodos)%>;
 </script>
 <script src="/javascript/mapThingToDoDetails.js"></script>
-<!--------------- Review form ----------------->
-<!-- Auth - Any user must be logged in to see reviews -->
+
+<!--------------- REVIEW FORM ----------------->
+<!-- Auth - A user must be logged in to see reviews -->
 <% if(loggedInUser) {%> 
-<div class="review-container" style="margin: 15px; background-color: #333;">
-    <div class="bootstrap" style="background-color: #343F4B; color: white;">
+<div class="review-container" style="padding: 25px; background-color: #222;">
+    <div class="bootstrap" style="background-color: #222; color: white;">
         <h3>Leave a Review</h3>
         <form action="/thingstodo/<%=thingstodos._id%>/reviews" method="POST" style="margin-bottom: 10px;">
             <div style="margin-bottom: 10px;">
                 <label for="review-title" class="form-label" style="font-size: 1.2em;">Title</label><br>
-                <input type="text" name="review[title]" id="title" required>
+                <input class="form-control" type="text" name="review[title]" id="title" required>
             </div>
+            
             <!-- Old range field -->
             <!-- <div style="margin-bottom: 3px;">
                 <label for="form-control-range">Rating</label>
                 <input type="range" class="form-control-range" min="1" max="5" name="review[rating]" id="rating">
             </div> -->
-            <!-- Review Star Rating -->
+            <!-- Fancy Review Star Rating -->
             <div style="margin-bottom: 10px;">
             <fieldset class="starability-basic">
                 <legend>Rating:</legend>
@@ -135,15 +136,20 @@
             <!-- Review Body -->
             <div style="margin-bottom: 10px;">
                 <label class="form-label" for="review-body">Write Your Review Here</label>
-                <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
+                <textarea class="form-control" name="review[body]" id="body" cols="30" rows="7" required></textarea>
             </div>
+            <script>
+                var post = document.querySelectorAll('textarea');
+                post.textContent = postText;
+                post.innerHTML = post.innerHTML.replace(/\n/g, '<br>\n');
+            </script>
             <!-- Post review -->
-            <button class="btn btn-success" style="cursor:pointer;">Submit</button>
+            <button class="btn btn-success" style="cursor:pointer; margin-bottom: 5px;">Submit</button><hr style="border-top: 1px solid gray;">
         </form>
         <!-- Show reviews -->
         <% for(let review of thingstodos.reviews) {%>
-            <div class="card mb-3" style="background-color: #343F4B;">
-                <div class="card-body" style="padding: 10px;">
+            <div class="card mb-3" style="background-color: #242526;">
+                <div class="card-body" style="background-color: #242526; margin: 20px;">
                     <h4 class="card-title"><%=review.title%></h4>
                     <h6 class="card-title"><%=review.author.username%></h6>
                     <p class="starability-result" data-rating="<%=review.rating%>">
@@ -158,10 +164,48 @@
                     </form>
                     <% } %> 
                 </div>
-        <% } %> 
             </div> 
+        <% } %> 
+            <!-- If there are no reviews, show this message -->
+            <%if(thingstodos.reviews.length === 0){%>
+                <p style="text-align: center">No Reviews Yet</p>
+            <%}%>
     </div>
 </div>
+<!-- If user is not logged in -->
+<% } else { %>
+    <div class="bootstrap" style="padding: 25px; background-color: #222; color: white;">
+        <div class="jumbotron jumbotron-fluid" style="background-color: #242526; text-align: center; margin-bottom: 5px;">
+            <div class="container">
+                <a href="/login" style="color: white;">
+                    <h1 class="display-5">Log In To Post Reviews<i class="fas fa-sign-in-alt" style="margin-left: 10px;"></i></h1>
+                </a>
+            </div>
+        </div>
+        <!-- Still show reviews but not the form -->
+        <% for(let review of thingstodos.reviews) {%>
+            <div class="card mb-3" style="background-color: #242526;">
+                <div class="card-body" style="background-color: #242526; margin: 20px;">
+                    <h4 class="card-title"><%=review.title%></h4>
+                    <h6 class="card-title"><%=review.author.username%></h6>
+                    <p class="starability-result" data-rating="<%=review.rating%>">
+                        Rated: <%review.rating%>  stars
+                    </p>
+                    <!-- <h6 class="card-subtitle" style="margin-bottom: 5px;color: lightgrey">By <%= review.author.username %> </h6> -->
+                    <p class="card-text"><strong>Review:</strong> <%= review.body %> </p>
+                    <!-- Auth - Only user logged in can delete their review -->
+                    <% if(loggedInUser && review.author.equals(loggedInUser._id)) {%> 
+                    <form action="/thingstodo/<%=thingstodos._id%>/reviews/<%=review._id%>?_method=DELETE" method="POST">
+                        <button class="btn btn-sm btn-danger" style="cursor:pointer;">Delete</button>
+                    </form>
+                    <% } %> 
+                </div>
+            </div> 
+        <% } %> 
+            <!-- If there are no reviews, show this message -->
+            <%if(thingstodos.reviews.length === 0){%>
+                <p style="text-align: center">No Reviews Yet</p>
+            <%}%>
+    </div>
 <% } %> 
-<!-- Optional (Submitted by: (in ejs) thingstodos.author.username) if wanting to display username after populating with author -->
 <%- include("partials/main_footer") %>

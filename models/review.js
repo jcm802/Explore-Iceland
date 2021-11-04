@@ -7,7 +7,7 @@ const reviewSchema = new Schema({
     title: String,
     body: String,
     rating: Number,
-    author: {
+    author: { // links user to review, needed to display their username
         type: Schema.Types.ObjectId,
         ref: 'User'
     }

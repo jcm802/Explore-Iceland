@@ -1,3 +1,5 @@
+// ---------- This file reseeds db data, needs to be separately executed ----------
+
 const mongoose 		= require("mongoose"),
 	  Plan          = require("../models/plan"),
       Thingstodo    = require("../models/thingstodo"),
@@ -14,24 +16,26 @@ mongoose.connect(url, {
 .then(() => console.log('Connected to DB!'))
 .catch(error => console.log(error.message));
 
-// Iterating over seeded data and adding to db
-const seedActivities = async () => {
-    await Plan.deleteMany({});
-    for(let i = 0; i < activities.length; i++){
-        const plan = new Plan({
-            // using es6 to access these values
-            title: `${activities[i].title}`,
-            description: `${activities[i].description}`,
-            image: `${activities[i].image}`,
-            location: `${activities[i].location}`,
-            geometry: {
-                type: 'Point',
-                coordinates: [ activities[i].longitude, activities[i].latitude ]
-              }
-        })
-        await plan.save()
-    }
-}
+
+
+// Iterating over seeded data and adding to db (Plans)
+// const seedActivities = async () => {
+//     await Plan.deleteMany({});
+//     for(let i = 0; i < activities.length; i++){
+//         const plan = new Plan({
+//             // using es6 to access these values
+//             title: `${activities[i].title}`,
+//             description: `${activities[i].description}`,
+//             image: `${activities[i].image}`,
+//             location: `${activities[i].location}`,
+//             geometry: {
+//                 type: 'Point',
+//                 coordinates: [ activities[i].longitude, activities[i].latitude ]
+//               }
+//         })
+//         await plan.save()
+//     }
+// }
 
 // =======
 // TESTING
@@ -63,7 +67,7 @@ const seedActivities = async () => {
 //     await t.save();
 // }
 
-
+// RE-SEED THINGS TO DO
 const seedThingsToDo = async () => {
     await Thingstodo.deleteMany({});
     for(let i = 0; i < thingsToDo.length; i++){

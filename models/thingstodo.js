@@ -55,14 +55,21 @@ const ThingstodoSchema = new Schema({
             type: Schema.Types.ObjectId,
             ref: 'Review'
         }
-    ]
+    ],
+    // Information chosen by the user after adding to plan, this is displayed
+    date: String,
+    time: String,
+    // Displayed date and time is converted into date object format and is sorted on the back end
+    dateTime: Date
 }, opts); // Adding in JSON and virtual compatibility
 
 // Map Marker Popup Display Information
 ThingstodoSchema.virtual('properties.popUpMarkup').get(function () {
-    return `<a style="color:black;" href="/thingstodo/${this._id}">More Information: ${this.title}</a>`
+    return `<h3 style="color:black;text-shadow:none;">${this.title}</h3>
+    <a style="color:black;text-shadow:none;" href="/thingstodo/${this._id}"><strong>More Information</strong></a>`
 });
-
+// Optional
+// <p style="color:black;text-shadow:none;"><strong>Date:</strong> ${this.date} - <strong>Time:</strong> ${this.time}</p>
 
 
 // Activating middleware with method findByIdAndDelete (exclusively) - accessing document just deleted

@@ -1,3 +1,4 @@
+// THINGS TO DO SEED DATA
 module.exports = [
     {
         title: "Gullfoss Falls",

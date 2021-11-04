@@ -12,8 +12,11 @@ body {
   min-height: 100vh;
 }
 
-.header {
-  z-index: 999;
+.logged-in-as {
+  position:absolute;
+  top: 135px;
+  left: 15px;
+
 }
 
 .spacer {
@@ -43,8 +46,10 @@ body {
 }
 
 .header {
-	height: 150px;
+	height: 160px;
+  margin-bottom: 20px;
 	position: relative;
+  z-index: 998;
 }
 
 .header-nav {
@@ -58,8 +63,7 @@ body {
 
 .nav-options {
 	font-family: 'Lato', sans-serif;
-  height: 30px;
-  margin-top: 10px;
+  height: 20px;
 }
 
 .nav-options a {
@@ -107,7 +111,7 @@ body {
 .extra-nav-container a {
   text-decoration: none;
   color: white;
-  margin-right: 30px;
+  margin-right: 15px;
 }
 
 
@@ -136,8 +140,10 @@ body {
 .icons img {
   width: 50px;
 }
-
-.search-bar-container {
+/* ---------------------
+   Search Bar - Optional 
+-------------------------*/
+/* .search-bar-container {
   position: absolute;
   display: inline-block;
   top: 45px;
@@ -151,7 +157,7 @@ body {
   border-radius: 5px;
   background-color: #5A6978;
   outline: none;
-  color: red;
+  color: #DC1E35;;
   padding: 5px;
   opacity: 0.5;
 }
@@ -169,28 +175,37 @@ input:focus {
   position: absolute;
   top: 4px;
   left: -26px;
-}
+} */
 
 .contact-authentication-container {
   width: 200px;
   height: 90px;
   float: right;
- position: absolute;
- top: 20px;
- right: 50px;
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
 
 .about-contact-container {
-  width: 220px;
+  width: fit-content;
   height: 40px;
   font-size: 13px;
   box-sizing: border-box;
   position: absolute;
-  right: 10px;
+  right: 30px;
   top: 20px;
 }
+
 .about-contact-container span  {
-  margin: 12px;
+  margin: 8px;
+}
+
+.about-contact-container a {
+  transition: color 0.5s ease-in-out;
+}
+
+.about-contact-container a:hover {
+  color: #DC1E35;
 }
 
 .login-signup-container {
@@ -414,12 +429,13 @@ input:focus {
 }
 
 @media only screen and (max-width: 1100px) {
-  .search-bar-container {
+  /* Optional */
+  /* .search-bar-container {
     right: 300px;
     width: 100%;
     left: 300px;
     top: 95px;
-  }
+  } */
 
   .partners-container {
     top: 0;
@@ -456,7 +472,8 @@ input:focus {
     margin-bottom: 6px;
   }
 
-  .search-bar-container label img {
+  /* Optional */
+  /* .search-bar-container label img {
     visibility: hidden;
-  }
+  } */
 }

@@ -7,22 +7,22 @@ const { thingstodoSchema, reviewSchema } = require("./joiSchemas"),
 
 // Logs the user if successful and tells the user to sign in for tasks requiring authentication
 module.exports.isLoggedIn = (req, res, next) => {
-    console.log("REQ.USER...", req.user);
     if(!req.isAuthenticated()){
         // stores url they are requesting on session to preserve state
         req.session.returnTo = req.originalUrl;
-        req.flash('error', 'You must be signed in to perform this action');
+        req.flash('error', 'You must be signed in first');
         return res.redirect('/login');
     }
-    console.log("SUCCESS!!");
+    // FOR REFERENCE
+    // console.log("SUCCESS!!");
     next();
 }
 
 // JOI VALIDATION MIDDLEWARE - For validating data sent in the body
 module.exports.validateThingstodo = (req, res, next) => {
 	// PASSING THROUGH TO SCHEMA
-	// error destructured from result
-    console.log(req.body)
+    // console.log(req.body)
+    // error destructured from result
 	const { error } = thingstodoSchema.validate(req.body);
 	if(error){
 		const msg = error.details.map(el => el.message).join(',')
@@ -59,7 +59,7 @@ module.exports.isAdmin = catchAsync(async (req, res, next) => {
     }
 });
 
-// To stop deletion on server side
+// Stops review deletion via server requests
 module.exports.isReviewAuthor = catchAsync(async (req, res, next) => {
     const { id, reviewId } = req.params;
     const review = await Review.findById(reviewId);

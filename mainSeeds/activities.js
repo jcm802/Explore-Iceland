@@ -1,7 +1,6 @@
-// MY PLANNER TEST DATA - SECTION IN PROGRESS
+// MY PLANNER SEED TEST DATA
 module.exports = [
-    { // data to be added to user db when clicking 'add plan'
-    // will link up id to whichever one is clicked so that the relevant info is added to my planner section, this will be retrieved by the index of the object
+    { 
         image: "https://images.unsplash.com/photo-1545382142-c3d9b8168eeb?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80",
         title: "Gulfoss Falls",
         description: "Gullfoss (translated to ‘Golden Falls’) is one of Iceland’s most iconic and beloved waterfalls, found in the Hvítá river canyon in Southwest Iceland. For those who rent a car or take a Golden Circle tour, Gullfoss waterfall can be reached within two hours from Iceland's capital. Most of the guided packages around the country include a stop at Gullfoss, such as this popular 6-Day Vacation, as do almost all self-drive journeys, like this 7-Day Winter Road Trip.",

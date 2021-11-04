@@ -1,6 +1,13 @@
 <%- include("partials/main_header") %>
-
-<!-- Loop from here -->
+<div class="bootstrap">
+    <div class="jumbotron jumbotron-fluid" style="background-color: #242526; color: white; text-align: center; margin-bottom: 5px;">
+        <div class="container">
+          <h1 class="display-4">Things To Do In Iceland</h1>
+          <p class="lead">Below are some of the most popular attractions in Iceland.<br>Click on them to find out more or add them to your plan if you are logged in.</p>
+        </div>
+      </div>
+</div>
+<!-- Show all thingstodo from the DB -->
 <% for(let thingstodo of thingstodos) { %>
 <div class="img-things-to-do-container-responsive">
     <div class="img-things-to-do-container-gallery">
@@ -11,12 +18,18 @@
                                         <!-- get title from db -->
             <div class="title-things-to-do"><%=thingstodo.title%></div>
         </a>                                                       
-                                                            <!-- get id from db -->
+                                <!-- get id from db -->
         <a href="/thingstodo/<%= thingstodo._id%>"><button class="btn-things-to-do">Find Out More</button></a>
+        <form action="/myplanner/<%=thingstodo._id%>" method="POST">
+            <button class="add-to-plan-button button hvr-grow"> 
+                <i class="fas fa-plus-circle" style="color:lightgreen"></i>
+                <p class="details-add-text">Add To Plan</p>
+            </button>
+        </form>
     </div>
 </div>
 <% } %>
-<!-- Loop end -->
+<!-- End of iteration -->
 <div id="map" class="things-to-do-map"></div>
 <script>const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
     const thingstodo = {features: <%-JSON.stringify(thingstodos)%>}</script>

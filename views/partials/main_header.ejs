@@ -12,22 +12,28 @@
 		<link rel="stylesheet" href="/stylesheets/explore.css">
 		<link rel="stylesheet" href="/stylesheets/things_to_do.css">
 		<link rel="stylesheet" href="/stylesheets/things_to_do_details.css">
-		<link rel="stylesheet" href="/stylesheets/things_to_do_new.css">
 		<link rel="stylesheet" href="/stylesheets/my_planner.css">
 		<link rel="stylesheet" href="/stylesheets/footer.css">
 		<link rel="stylesheet" href="/stylesheets/stars.css">
 		<link rel="stylesheet" href="/stylesheets/map.css">
+		<link rel="stylesheet" href="/stylesheets/about.css">
+		<link rel="stylesheet" href="/stylesheets/loading.css">
+		<link rel="stylesheet" href="/stylesheets/sliders.css">
 		<link rel="shortcut icon" href="/images/header/iceland_flag_index_favicon.ico">
+		<!-- Isolated Bootstrap -->
 		<link rel="stylesheet" href="https://toert.github.io/Isolated-Bootstrap/versions/4.0.0-beta/iso_bootstrap4.0.0min.css">
 		<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+		<!-- Moment -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 		<!-- MapBox -->
 		<script src='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js'></script>
 		<link href='https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css' rel='stylesheet' />
-
 	</head>
 	<body>
+		
+		<div class="loading"></div>
 	<div class="spacer">
 		<div class="header">
 			<a href="/home">
@@ -59,12 +65,11 @@
 					<a href="/explore"><li>Explore</li></a>
 					<li><a href="/thingstodo">Things To Do</a></li>
 					<li><a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=falsehttps://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank">Places To Stay</a></li>
-					<li><a href="#">Facts</a></li>
+					<li><a href="/facts">Facts</a></li>
 					<li><a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank">
 							Book</a></li>
-					<li><a href="#">My Planner</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="/myplanner">My Planner</a></li>
+					<li><a href="/about">About</a></li>
 					<!-- Show or hide depending on if user is logged in -->
 					<% if(loggedInUser) {%> 
 					<li><a href="/logout">Log Out</a></li>
@@ -84,17 +89,16 @@
 						<a href="#"><img src="/images/header/Company2.png" alt="Company2"></a>
 						<a href="#"><img src="/images/header/Company3.png" alt="Company3"></a>
 					</div>
-					<!--Search Bar-->
-					<div class="search-bar-container">
+					<!--Search Bar - Optional -->
+					<!-- <div class="search-bar-container">
 						<label for="site-search"><img src="/images/header/Search_Sml.png"></label>
 						<input type="search" id="site-search" name="q" aria-label="Search through site content" placeholder="Search Explore Iceland">
-					</div>
+					</div> -->
 				</div>
 
 				<div class="contact-authentication-container">
 					<div class="about-contact-container">
-						<span>ABOUT</span><i class="far fa-question-circle"></i>
-						<span>CONTACT<span><i class="far fa-envelope"></i>
+						<a href="/about"><span>ABOUT</span><i class="far fa-question-circle"></i></a>
 					</div>
 					<div class="login-signup-container">
 						<!-- Show and hide depending on if a user is logged in -->
@@ -102,11 +106,12 @@
 						<a href="/login" class="login-link"><span>LOGIN</span><i class="fas fa-sign-in-alt"></i></a>
 						<a href="/register" class="signup-link"><span>SIGN UP</span><i class="fas fa-user-plus"></i></a>
 						<% } else {%>
-							<a href="/logout" class="logout-link"><span>LOG OUT</span><i class="fas fa-sign-out-alt"></i></a>
-						<% } %> 
+							<a href="/logout" class="logout-link"><span>LOG OUT</span><i class="fas fa-sign-out-alt"></i></a><br>
+							
+							<% } %> 
 						</div>
-						
 				</div>
+				
 			</div>
 
 			<!---------
@@ -118,14 +123,18 @@
 					<a href="/explore" class="explore-nav-option"><span>explore</span></a>
 					<a href="/thingstodo" class="thingstodo-nav-option"><span>things to do</span></a>
 					<a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank"><span>places to stay</span></a>
-					<span>facts</span>
+					<a href="/facts"><span>facts</span></a>
 					<a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank">
 						<span>book</span></a>
-					<!-- <a href="/myplanner" class="myplanner-nav-option"> -->
+					<a href="/myplanner" class="myplanner-nav-option">
 					<span>My Planner</span>
-					<!-- </a> -->
+					</a>
 				</div>
 			</div>
+			<% if(loggedInUser) {%>
+				<p class="logged-in-as">Logged in as: <strong> <%= loggedInUser.username %>  </strong></p>
+			<% } %>  
 		</div>
-
+		
+		
 	<%- include("./flash") %>

@@ -2,7 +2,6 @@ const express = require('express'),
     router = express.Router(),
     catchAsync = require('../utils/catchAsync'),
     passport = require('passport'),
-    User = require('../models/user'),
     usersController = require('../controllers/users');
 
 // SHOW REGISTER & REGISTER USER

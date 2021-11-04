@@ -1,3 +1,52 @@
-h1 {
+.count, .headline {
     text-align: center;
+    background-color: #242526;
+    margin: 0;
+    padding: 10px;
+}
+
+.planner-map {
+    margin-top: 0;
+}
+
+/* Optional empty plans page */
+.planner-prompt-container {
+    /* position: relative;
+    text-align: center;
+    overflow: hidden; */
+
+    /* Keeps footer down */
+    height: 20px;
+}
+
+/* .planner-prompt-headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 30pt;
+    color: #E2E2E2;
+}
+
+.planner-prompt-image {
+    margin: auto;
+    height: 500px;
+    width: 100%;
+    
+} */
+
+
+.planner-add-more-button p {
+    font-size: 17px;
+    color: white;
+}
+
+.planner-add-more-button i {
+    font-size: 40px;
+    padding: 10px;
+}
+
+.planner-location-nav-icon {
+    cursor: pointer;
 }

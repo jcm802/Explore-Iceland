@@ -39,8 +39,6 @@ router.route('/:id')
 	.put(isLoggedIn, isAdmin, upload.array('image'), validateThingstodo, catchAsync(thingsToDoController.editThingToDo))
 	.delete(isLoggedIn, isAdmin, catchAsync(thingsToDoController.deleteThingToDo));
 	
-
-
 // SHOW EDIT
 router.get('/:id/edit', isLoggedIn, isAdmin, catchAsync(thingsToDoController.showEditThingToDo));
 
