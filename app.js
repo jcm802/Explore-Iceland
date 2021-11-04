@@ -36,12 +36,16 @@ const express 			= require('express'),
 	  // Mitigates cross site scripting, click-jacking etc.
 	  helmet		= require('helmet'),
 	  // App connection to express
-	  app 				= express();
+	  app 				= express(),
+	  
+	  // uses npm connect-mongo, using mongo to store sessions for scalability (default is express sessions)
+	  MongoStore		= require("connect-mongo")(session);
 
-const url = process.env.DATABASEURL || "mongodb://localhost:27017/iceland";
+			// Mongo Atlas
+const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/iceland";
 
 // Connecting mongoose
-mongoose.connect(url, { 	
+mongoose.connect(dbUrl, { 	
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false,
@@ -68,10 +72,26 @@ app.use(methodOverride('_method'));
 // Use stylesheets from public folder - static assets are files that the server doesn't change
 app.use(express.static(__dirname + "/public"));
 
+// Sessions secret
+const secret = process.env.SECRET || 'thisshouldbeabettersecret!';
+
+const store = new MongoStore({
+	url: dbUrl,
+	secret,
+	// sessions resave only when neccessary (not on each refresh)
+	// seconds not milliseconds (set to 24 hours)
+	touchAfter: 24 * 60 * 60
+});
+
+store.on("error", function(e){
+	console.log("SESSION STORE ERROR", e)
+});
+
 // Sessions setup
 const sessionConfig = {
+	store,
 	name: 'session',
-	secret: 'thisshouldbeabettersecret!',
+	secret,
 	resave: false,
 	saveUninitialized: true,
 	cookie: {
