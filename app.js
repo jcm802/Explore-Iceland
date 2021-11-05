@@ -84,6 +84,7 @@ const store = new MongoStore({
 	touchAfter: 24 * 60 * 60
 });
 
+// Checks session store for errors
 store.on("error", function(e){
 	console.log("SESSION STORE ERROR", e)
 });
@@ -262,7 +263,7 @@ app.use((err, req, res) => {
 // ======
 // SERVER ROUTE
 // ======
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
 	console.log(`Server on port ${port} started...`);
 });
