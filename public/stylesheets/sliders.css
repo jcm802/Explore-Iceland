@@ -1,5 +1,6 @@
 /* Controls page element sliding up animations when visible in the viewport */
-
+/* Does not perform well on smaller screen sizes, effect limited to larger viewports */
+@media only screen and (min-width: 500px) {
   .come-in {
     transform: translateY(150px);
     animation: come-in 0.8s ease forwards;
@@ -17,3 +18,5 @@
   @keyframes come-in {
     to { transform: translateY(0); }
   }
+}
+}
