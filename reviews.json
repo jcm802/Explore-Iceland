@@ -1,0 +1,7 @@
+{"_id":{"$oid":"61571fdba24aca3928ad5c38"},"rating":4,"body":"Spectacular experience! But a little crowded on the day","__v":0}
+{"_id":{"$oid":"6160338d4325c36ebc830c17"},"rating":5,"body":"This place suuuuuuucks!","__v":0}
+{"_id":{"$oid":"61603e255932f770489f8d6c"},"rating":5,"body":"I love this place, it's awesome","author":{"$oid":"61600bae068dd262d2c0f93a"},"__v":0}
+{"_id":{"$oid":"6160491616d29c7235f9f55d"},"rating":4,"body":"Place was stunning, but Jim was kind of annoying","author":{"$oid":"61600af111a28361e81ba81c"},"__v":0}
+{"_id":{"$oid":"616445a8773c0c10f77cc712"},"rating":1,"body":"Sorry this place wasn't great :|","author":{"$oid":"6164399a6f1e790e220f2ab3"},"__v":0}
+{"_id":{"$oid":"616448b9773c0c10f77cc713"},"rating":4,"body":"Thought this place was great","author":{"$oid":"6164411f773c0c10f77cc711"},"__v":0}
+{"_id":{"$oid":"616449c0773c0c10f77cc714"},"rating":0,"body":"It was awful","author":{"$oid":"6164411f773c0c10f77cc711"},"__v":0}
