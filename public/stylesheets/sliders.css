@@ -6,7 +6,7 @@
     /* 0.8 */
   }
   .come-in:nth-child(odd) {
-    animation-duration: 2s; 
+    animation-duration: 1s; 
     /* 0.6 */
   }
   .already-visible {
