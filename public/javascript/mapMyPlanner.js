@@ -133,3 +133,4 @@ const nav = new mapboxgl.NavigationControl({
     });
     map.addControl(nav, 'top-right');
 
+map.resize();
