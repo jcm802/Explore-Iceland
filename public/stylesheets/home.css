@@ -336,7 +336,11 @@
   }
 
   .testimonial-para {
-    width: 45%;
+    width: 60%;
+  }
+
+  #person2-column {
+    display: none;
   }
 }
 

@@ -41,8 +41,9 @@ const express 			= require('express'),
 	  // uses npm connect-mongo, using mongo to store sessions for scalability (default is express sessions)
 	  MongoStore		= require("connect-mongo")(session);
 
-			// Mongo Atlas
+			// Mongo Cloud DB (ATLAS)		// Mongo Local DB
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/iceland";
+// const dbUrl = process.env.DB_URL;
 
 // Connecting mongoose
 mongoose.connect(dbUrl, { 	
@@ -52,7 +53,7 @@ mongoose.connect(dbUrl, {
 	useCreateIndex: true
 })
 .then(() => console.log('Connected to DB!'))
-.catch(error => console.log(error.message));
+.catch(error => console.log("Error: " + error.message));
 
 // Ejs-mate setup - telling express to use this engine instead of the default
 app.engine('ejs', ejsMate)
@@ -261,7 +262,7 @@ app.use((err, req, res) => {
 // ======
 // SERVER ROUTE
 // ======
-const port = process.env.PORT || 3000;
+const port = 3000;
 app.listen(port, () => {
 	console.log(`Server on port ${port} started...`);
 });
