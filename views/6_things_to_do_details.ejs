@@ -137,11 +137,6 @@
                 <label class="form-label" for="review-body">Write Your Review Here</label>
                 <textarea class="form-control" name="review[body]" id="body" cols="30" rows="7" required></textarea>
             </div>
-            <script>
-                var post = document.querySelectorAll('textarea');
-                post.textContent = postText;
-                post.innerHTML = post.innerHTML.replace(/\n/g, '<br>\n');
-            </script>
             <!-- Post review -->
             <button class="btn btn-success" style="cursor:pointer; margin-bottom: 5px;">Submit</button><hr style="border-top: 1px solid gray;">
         </form>
