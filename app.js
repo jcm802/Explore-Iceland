@@ -71,7 +71,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
 // Use stylesheets from public folder - static assets are files that the server doesn't change
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "dist"));
 
 // Sessions secret
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';

@@ -30,9 +30,9 @@
     border: 2px solid white;
     border-radius: 10px;
     background-color: rgba(20,25,29,0.3);
-    padding: 10px;
+    padding: 5px;
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 1px;
     cursor: pointer;
     -webkit-transition: ease-out 0.4s;
