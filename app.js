@@ -134,7 +134,8 @@ const scriptSrcUrls = [
     "https://maxcdn.bootstrapcdn.com/",
 	"https://stackpath.bootstrapcdn.com/",
 	"https://maps.googleapis.com/",
-	"https://ajax.googleapis.com/"
+	"https://ajax.googleapis.com/",
+	"https://cdn.jsdelivr.net/"
 ];
 const styleSrcUrls = [
     "https://maxcdn.bootstrapcdn.com/",
@@ -144,6 +145,7 @@ const styleSrcUrls = [
 	"https://cdn.bootstrap.com/",
 	"https://toert.github.io/",
 	"https://cdnjs.cloudfare.com/",
+	"https://cdn.jsdelivr.net/"
 ];
 const connectSrcUrls = [
     "https://api.tiles.mapbox.com/",
