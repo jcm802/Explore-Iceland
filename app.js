@@ -118,11 +118,14 @@ app.use(flash());
 const scriptSrcUrls = [
     "https://api.tiles.mapbox.com/",
     "https://api.mapbox.com/",
+	"https://a.tiles.mapbox.com/",
+    "https://b.tiles.mapbox.com/",
+    "https://events.mapbox.com/",
     "https://cdnjs.cloudflare.com/",
     "https://cdn.jsdelivr.net/",
 	"https://code.jquery.com/",
     "https://maxcdn.bootstrapcdn.com/",
-	"https://stackpath.bootstrapcdn.com",
+	"https://stackpath.bootstrapcdn.com/",
 	"https://maps.googleapis.com/",
 	"https://ajax.googleapis.com/"
 ];
@@ -136,22 +139,45 @@ const styleSrcUrls = [
 	"https://cdnjs.cloudfare.com/",
 ];
 const connectSrcUrls = [
+    "https://api.tiles.mapbox.com/",
     "https://api.mapbox.com/",
-    "https://a.tiles.mapbox.com/",
+	"https://a.tiles.mapbox.com/",
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
-	"https://cdnjs.cloudfare.com/",
+    "https://cdnjs.cloudflare.com/",
+    "https://cdn.jsdelivr.net/",
+	"https://code.jquery.com/",
+    "https://maxcdn.bootstrapcdn.com/",
+	"https://stackpath.bootstrapcdn.com/",
+	"https://maps.googleapis.com/",
+	"https://ajax.googleapis.com/"
 ];
-const fontSrcUrls = ["https://fonts.gstatic.com"];
+
+// const childSrcUrls = [
+// 	"https://api.tiles.mapbox.com/",
+//     "https://api.mapbox.com/",
+// 	"https://a.tiles.mapbox.com/",
+//     "https://b.tiles.mapbox.com/",
+//     "https://events.mapbox.com/",
+//     "https://cdnjs.cloudflare.com/",
+//     "https://cdn.jsdelivr.net/",
+// 	"https://code.jquery.com/",
+//     "https://maxcdn.bootstrapcdn.com/",
+// 	"https://stackpath.bootstrapcdn.com",
+// 	"https://maps.googleapis.com/",
+// 	"https://ajax.googleapis.com/"
+// ];
+const fontSrcUrls = ["https://fonts.gstatic.com/"];
 app.use(
     helmet.contentSecurityPolicy({
+		sandbox: ['allow-forms'],
         directives: {
-            defaultSrc: [],
+            defaultSrc: ["'self'"],
             connectSrc: ["'self'", ...connectSrcUrls],
-            scriptSrc: ["'unsafe-inline'", "'self'", ...scriptSrcUrls],
-            styleSrc: ["'self'", "'unsafe-inline'", ...styleSrcUrls],
-            workerSrc: ["'self'", "blob:"],
-			childSrc: ["'self'", "blob:"],
+            scriptSrc: ["'self'", "'unsafe-inline'", ...scriptSrcUrls],
+            styleSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", ...styleSrcUrls],
+			// childSrc: ["'self'", "blob:", ...childSrcUrls],
+			workerSrc: ["'self'", "blob:"],
             objectSrc: [],
             imgSrc: [
                 "'self'",
@@ -160,8 +186,8 @@ app.use(
                 "https://res.cloudinary.com/dp0ylwjhc/",
                 "https://images.unsplash.com/",
 				"https://maps.gstatic.com/",
-				"https://googleapis.com",
-				"https://ggpht.com",
+				"https://googleapis.com/",
+				"https://ggpht.com/",
 				"https://cdnjs.cloudfare.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
