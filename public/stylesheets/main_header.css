@@ -52,7 +52,7 @@ body {
   z-index: 998;
 }
 
-.header-nav {
+/* .header-nav {
 	height: 25px;
 	width: 100%;
 	font-size: 15px;
@@ -74,7 +74,7 @@ body {
 
 .nav-options a:hover {
   color: #DC1E35;
-}
+} */
 
 .login-link {
   transition: color 0.5s ease-in-out;
