@@ -114,44 +114,51 @@ app.use(session(sessionConfig));
 // Flash
 app.use(flash());
 
+// This disables the `contentSecurityPolicy` middleware but keeps the rest.
+app.use(
+	helmet({
+	  contentSecurityPolicy: false,
+	})
+  );
+
 // Helmet - Custom content security policy
-const scriptSrcUrls = [
-    "https://api.tiles.mapbox.com/",
-    "https://api.mapbox.com/",
-	"https://a.tiles.mapbox.com/",
-    "https://b.tiles.mapbox.com/",
-    "https://events.mapbox.com/",
-    "https://cdnjs.cloudflare.com/",
-    "https://cdn.jsdelivr.net/",
-	"https://code.jquery.com/",
-    "https://maxcdn.bootstrapcdn.com/",
-	"https://stackpath.bootstrapcdn.com/",
-	"https://maps.googleapis.com/",
-	"https://ajax.googleapis.com/"
-];
-const styleSrcUrls = [
-    "https://maxcdn.bootstrapcdn.com/",
-    "https://api.mapbox.com/",
-    "https://api.tiles.mapbox.com/",
-    "https://fonts.googleapis.com/",
-	"https://cdn.bootstrap.com/",
-	"https://toert.github.io/",
-	"https://cdnjs.cloudfare.com/",
-];
-const connectSrcUrls = [
-    "https://api.tiles.mapbox.com/",
-    "https://api.mapbox.com/",
-	"https://a.tiles.mapbox.com/",
-    "https://b.tiles.mapbox.com/",
-    "https://events.mapbox.com/",
-    "https://cdnjs.cloudflare.com/",
-    "https://cdn.jsdelivr.net/",
-	"https://code.jquery.com/",
-    "https://maxcdn.bootstrapcdn.com/",
-	"https://stackpath.bootstrapcdn.com/",
-	"https://maps.googleapis.com/",
-	"https://ajax.googleapis.com/"
-];
+// const scriptSrcUrls = [
+//     "https://api.tiles.mapbox.com/",
+//     "https://api.mapbox.com/",
+// 	"https://a.tiles.mapbox.com/",
+//     "https://b.tiles.mapbox.com/",
+//     "https://events.mapbox.com/",
+//     "https://cdnjs.cloudflare.com/",
+//     "https://cdn.jsdelivr.net/",
+// 	"https://code.jquery.com/",
+//     "https://maxcdn.bootstrapcdn.com/",
+// 	"https://stackpath.bootstrapcdn.com/",
+// 	"https://maps.googleapis.com/",
+// 	"https://ajax.googleapis.com/"
+// ];
+// const styleSrcUrls = [
+//     "https://maxcdn.bootstrapcdn.com/",
+//     "https://api.mapbox.com/",
+//     "https://api.tiles.mapbox.com/",
+//     "https://fonts.googleapis.com/",
+// 	"https://cdn.bootstrap.com/",
+// 	"https://toert.github.io/",
+// 	"https://cdnjs.cloudfare.com/",
+// ];
+// const connectSrcUrls = [
+//     "https://api.tiles.mapbox.com/",
+//     "https://api.mapbox.com/",
+// 	"https://a.tiles.mapbox.com/",
+//     "https://b.tiles.mapbox.com/",
+//     "https://events.mapbox.com/",
+//     "https://cdnjs.cloudflare.com/",
+//     "https://cdn.jsdelivr.net/",
+// 	"https://code.jquery.com/",
+//     "https://maxcdn.bootstrapcdn.com/",
+// 	"https://stackpath.bootstrapcdn.com/",
+// 	"https://maps.googleapis.com/",
+// 	"https://ajax.googleapis.com/"
+// ];
 
 // const childSrcUrls = [
 // 	"https://api.tiles.mapbox.com/",
@@ -167,34 +174,34 @@ const connectSrcUrls = [
 // 	"https://maps.googleapis.com/",
 // 	"https://ajax.googleapis.com/"
 // ];
-const fontSrcUrls = ["https://fonts.gstatic.com/"];
-app.use(
-    helmet.contentSecurityPolicy({
-		sandbox: ['allow-forms'],
-        directives: {
-            defaultSrc: ["'self'"],
-            connectSrc: ["'self'", ...connectSrcUrls],
-            scriptSrc: ["'self'", "'unsafe-inline'", ...scriptSrcUrls],
-            styleSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", ...styleSrcUrls],
-			childSrc: ["'self'", "blob:", ...childSrcUrls],
-			workerSrc: ["'self'", "blob:"],
-            objectSrc: [],
-            imgSrc: [
-                "'self'",
-                "blob:",
-                "data:",
-                "https://res.cloudinary.com/dp0ylwjhc/",
-                "https://images.unsplash.com/",
-				"https://maps.gstatic.com/",
-				"https://googleapis.com/",
-				"https://ggpht.com/",
-				"https://cdnjs.cloudfare.com/",
-            ],
-            fontSrc: ["'self'", ...fontSrcUrls],
-			frameSrc: "https://www.google.com/",
-        },
-    })
-);
+// const fontSrcUrls = ["https://fonts.gstatic.com/"];
+// app.use(
+//     helmet.contentSecurityPolicy({
+// 		sandbox: ['allow-forms'],
+//         directives: {
+//             defaultSrc: ["'self'"],
+//             connectSrc: ["'self'", ...connectSrcUrls],
+//             scriptSrc: ["'self'", "'unsafe-inline'", ...scriptSrcUrls],
+//             styleSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'", ...styleSrcUrls],
+// 			childSrc: ["'self'", "blob:", ...childSrcUrls],
+// 			workerSrc: ["'self'", "blob:"],
+//             objectSrc: [],
+//             imgSrc: [
+//                 "'self'",
+//                 "blob:",
+//                 "data:",
+//                 "https://res.cloudinary.com/dp0ylwjhc/",
+//                 "https://images.unsplash.com/",
+// 				"https://maps.gstatic.com/",
+// 				"https://googleapis.com/",
+// 				"https://ggpht.com/",
+// 				"https://cdnjs.cloudfare.com/",
+//             ],
+//             fontSrc: ["'self'", ...fontSrcUrls],
+// 			frameSrc: "https://www.google.com/",
+//         },
+//     })
+// );
 
 // Passport
 app.use(passport.initialize());
