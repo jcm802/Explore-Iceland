@@ -98,10 +98,10 @@ const sessionConfig = {
 	saveUninitialized: true,
 	cookie: {
 		// Session cannot be accessed with JS
-		// httpOnly: true,
+		httpOnly: true,
 
 		// Cookies only used over https
-		secure: true,
+		// secure: true,
 
 		// Date is in ms, expire in 1 week
 		expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
