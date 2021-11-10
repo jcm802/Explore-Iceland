@@ -10,14 +10,11 @@
 }
 
 /* Optional empty plans page */
-.planner-prompt-container {
+/* .planner-prompt-container { */
     /* position: relative;
     text-align: center;
     overflow: hidden; */
-
-    /* Keeps footer down */
-    height: 20px;
-}
+/* } */
 
 /* .planner-prompt-headline {
     position: absolute;

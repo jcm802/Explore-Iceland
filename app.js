@@ -267,6 +267,13 @@ app.get('/facts', (req, res) => {
 	res.render('10_facts');
 });
 
+// ------------
+// BOOK ROUTE
+// ------------
+app.get('/book', (req, res) => {
+	res.render('11_book');
+});
+
 // -------------
 // ABOUT ROUTE
 // -------------
