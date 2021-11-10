@@ -159,7 +159,8 @@ const connectSrcUrls = [
     "https://maxcdn.bootstrapcdn.com/",
 	"https://stackpath.bootstrapcdn.com/",
 	"https://maps.googleapis.com/",
-	"https://ajax.googleapis.com/"
+	"https://ajax.googleapis.com/",
+	"https://ipinfo.io/",
 ];
 
 const childSrcUrls = [

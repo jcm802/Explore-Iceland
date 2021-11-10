@@ -13,7 +13,6 @@
                         <p class="details-add-text">Add To Planner</p>
                     </a>
                 </div>
-            
           </div>
         <!-- Using plans object received by route by app.js -->
         <!-- Iterate over all plans and display-->
@@ -21,8 +20,11 @@
         <% for(let plan of plans.thingstodo) { %>
             <div class="card" id="plan-card" style="padding: 10px; background-color: #242526; color:white; text-align: center; margin-bottom: 5px;">
                 <div class="row">
-                    <div class="col-sm-7">
-                        <a href="/thingstodo/<%=plan.id%>"><img class="img-fluid" alt="Find out more about <%=plan.title%>" src="<%=plan.image%>" style="border: 1px solid white;margin-bottom:10px; height: 100%; object-fit: cover; width: 100%;"></a>
+                    <div class="col-sm-7" style="position: relative;">
+                        <a href="/thingstodo/<%=plan.id%>">
+                            <img class="img-fluid" alt="Find out more about <%=plan.title%>" src="<%=plan.image%>" style="border: 1px solid white; margin-bottom:10px; height: 100%; object-fit: cover; width: 100%;">
+                            <button class="btn-things-to-do" style="top: 50%;">Find Out More</button>
+                        </a>
                     </div>
                     <div class="col-sm-5">
                         <div class="card-body" style="padding: 20px 0">
