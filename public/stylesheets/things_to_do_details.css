@@ -242,3 +242,12 @@
     background-image: url('images/tours.jpeg');
   }
 }
+
+#login-prompt-reviews {
+  color: white;
+  text-decoration: none;
+}
+
+#login-prompt-reviews:hover {
+  color: #DC1E35;
+}
