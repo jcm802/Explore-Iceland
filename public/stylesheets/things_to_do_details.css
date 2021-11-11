@@ -246,6 +246,7 @@
 #login-prompt-reviews {
   color: white;
   text-decoration: none;
+  transition: color 0.5s ease-in-out;
 }
 
 #login-prompt-reviews:hover {
