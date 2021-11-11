@@ -34,8 +34,9 @@
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
 	</head>
 	<body>
-		
-		<div class="loading"></div>
+		<!-- Loading Screen -->
+	<div class="loading"></div>
+	<!-- Keeps footer down -->
 	<div class="spacer">
 		<div class="header">
 			<a href="/home">
@@ -124,27 +125,30 @@
 			<!---------
 				MAIN NAV FOR LARGER SCREENS
 			-->
-			<div class="header-nav">
-				<div class="nav-options">
-					<a href="/home" class="home-nav-option"><span>home</span></a>
-					<a href="/explore" class="explore-nav-option"><span>explore</span></a>
-					<a href="/thingstodo" class="thingstodo-nav-option"><span>things to do</span></a>
-					<!-- <a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank"><span>places to stay</span></a> -->
-					<a href="/facts"><span>facts</span></a>
-					<!-- <a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank"> -->
-						<a href="/book">
-							<span>book</span>
+			<nav>
+				<div class="header-nav">
+					<div class="nav-options">
+						<a href="/home" class="home-nav-option"><span>home</span></a>
+						<a href="/explore" class="explore-nav-option"><span>explore</span></a>
+						<a href="/thingstodo" class="thingstodo-nav-option"><span>things to do</span></a>
+						<!-- <a href="https://www.booking.com/searchresults.en-gb.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB&sid=ef044b618e46a999294cfdff7665eaac&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.en-gb.html%3Faid%3D304142%3Blabel%3Dgen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB%3Bsid%3Def044b618e46a999294cfdff7665eaac%3Bsb_price_type%3Dtotal%3Bsig%3Dv1IQHCUSWT%26%3B&ss=iceland&is_ski_area=0&checkin_year=&checkin_month=&checkout_year=&checkout_month=&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&dest_id=&dest_type=&search_pageview_id=f07e6265ce31015e&search_selected=false" target="_blank"><span>places to stay</span></a> -->
+						<a href="/facts"><span>facts</span></a>
+						<!-- <a href="https://www.booking.com/index.en-gb.html?aid=304142;label=gen173nr-1FCAEoggI46AdIM1gEaFCIAQGYAQm4AQfIAQzYAQHoAQH4AQuIAgGoAgO4AsqR4IsGwAIB0gIkMTBiOTJlOTctODFjMS00NzcxLTkwNDQtMzE4ZjdhZGNiOTdh2AIG4AIB;sid=ef044b618e46a999294cfdff7665eaac;keep_landing=1;sb_price_type=total;sig=v1FC5b79lp&" target="_blank"> -->
+							<a href="/book">
+								<span>book</span>
+							</a>
+						<!-- </a> -->
+						<a href="/myplanner" class="myplanner-nav-option">
+						<span>My Planner</span>
 						</a>
-					<!-- </a> -->
-					<a href="/myplanner" class="myplanner-nav-option">
-					<span>My Planner</span>
-					</a>
+					</div>
 				</div>
-			</div>
+			</nav>
 			<% if(loggedInUser) {%>
 				<p class="logged-in-as">Logged in as: <strong> <%= loggedInUser.username %>  </strong></p>
 			<% } %>  
 		</div>
+		<main>
 		
 		
 	<%- include("./flash") %>
