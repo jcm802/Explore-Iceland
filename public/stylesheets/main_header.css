@@ -409,14 +409,7 @@ input:focus {
     margin-left: -3px;
   }
 
-  .contact-authentication-container {
-    /*background: yellow;*/
-    visibility: hidden;
-  }
-
-  .header-nav {
-    display: none;
-  }
+  
 
   .top-left {
     margin-left: 70px;
@@ -441,11 +434,20 @@ input:focus {
     top: 0;
     right: 100px;
 }
+
+.contact-authentication-container {
+  /*background: yellow;*/
+  visibility: hidden;
+}
 }
 
 @media only screen and (max-width: 850px) {
   .partners-container {
     right: 0px
+  }
+
+  .header-nav {
+    display: none;
   }
 }
 
