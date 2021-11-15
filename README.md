@@ -18,7 +18,7 @@ Also includes the following: -
 - Loading screen and sliding animations for elements on scroll.
 - Adherence with GDPR with cookies policy prompt to user.
 - Book and facts page.
-- Styling with a mix of custom CSS and isolated bootstrap (V4).
+- Styling is a mix of custom CSS and isolated bootstrap (V4).
 
 # Landing page
 ![](site_images/1_landing.png)
