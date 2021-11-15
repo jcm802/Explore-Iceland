@@ -2,7 +2,7 @@
 
 See the deployed site here: https://exploreiceland.herokuapp.com/
 
-The main feature of the website is a planner section which allows the user to add attractions from the things to do section to their account, set a time and date, and see their planned attraction plotted on a map. Added attractions are also sorted by time and date automatically.
+The unique feature of the website is a planner section which allows the user to add attractions from the things to do section to their account, set a time and date, and see their planned attraction plotted on a map. Added attractions are also sorted by time and date automatically.
 
 Also includes the following: -
 - Landing page with image slideshow transitions.
